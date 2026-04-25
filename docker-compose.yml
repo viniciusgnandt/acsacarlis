@@ -3,22 +3,20 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: acsacarlis-site:${IMAGE_TAG:-latest}
-    container_name: ${CONTAINER_NAME:-acsacarlis-site}
+    image: acsacarlis-site:${IMAGE_TAG}
+    container_name: ${CONTAINER_NAME}
     restart: always
-    env_file:
-      - .env
     environment:
-      - GADS_ENABLED=${GADS_ENABLED:-false}
-      - GADS_ID=${GADS_ID:-}
-      - GADS_LABEL=${GADS_LABEL:-}
-      - GTM_ID=${GTM_ID:-}
-      - SITE_URL=${SITE_URL:-https://www.acsacarlis.adv.br}
+      - GADS_ENABLED=${GADS_ENABLED}
+      - GADS_ID=${GADS_ID}
+      - GADS_LABEL=${GADS_LABEL}
+      - GTM_ID=${GTM_ID}
+      - SITE_URL=${SITE_URL}
     expose:
       - "80"
     # Para acesso direto sem reverse proxy, descomente:
     # ports:
-    #   - "${HOST_PORT:-8080}:80"
+    #   - "${HOST_PORT}:80"
     networks:
       - web
     healthcheck:
