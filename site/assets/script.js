@@ -8,9 +8,9 @@ document.addEventListener('DOMContentLoaded', function () {
 // Basta descomentar o trecho do gtag no index.html e configurar o conversion ID/label.
 function trackConversion(source) {
     try {
-        if (typeof gtag === 'function') {
+        if (typeof gtag === 'function' && window.__GADS_SEND_TO__) {
             gtag('event', 'conversion', {
-                send_to: 'AW-XXXXXXXXXX/XXXXXXXXXXXXXX',
+                send_to: window.__GADS_SEND_TO__,
                 event_category: 'whatsapp',
                 event_label: source || 'unknown',
             });

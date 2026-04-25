@@ -12,9 +12,14 @@ COPY nginx/default.conf /etc/nginx/conf.d/default.conf
 # Copia arquivos estáticos
 COPY site/ /usr/share/nginx/html/
 
-# Permissões
+# Copia entrypoint que injeta variáveis de ambiente no HTML
+COPY docker-entrypoint.sh /docker-entrypoint.sh
+RUN chmod +x /docker-entrypoint.sh
+
+# Permissões (entrypoint roda como root e precisa escrever no index.html)
 RUN chown -R nginx:nginx /usr/share/nginx/html && \
-    chmod -R 755 /usr/share/nginx/html
+    chmod -R 755 /usr/share/nginx/html && \
+    chmod 644 /usr/share/nginx/html/index.html
 
 EXPOSE 80
 
@@ -22,4 +27,5 @@ EXPOSE 80
 HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
     CMD wget --no-verbose --tries=1 --spider http://localhost/ || exit 1
 
+ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD ["nginx", "-g", "daemon off;"]

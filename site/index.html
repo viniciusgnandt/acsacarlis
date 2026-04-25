@@ -13,15 +13,15 @@
     <meta name="geo.region" content="BR-SP">
     <meta name="geo.placename" content="Mogi das Cruzes">
 
-    <link rel="canonical" href="https://www.acsacarlis.adv.br/">
+    <link rel="canonical" href="__SITE_URL__/">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:locale" content="pt_BR">
     <meta property="og:title" content="Dra. Acsa Carlis - Advogada Trabalhista em Mogi das Cruzes e Região">
     <meta property="og:description" content="Defesa dos seus direitos trabalhistas com atendimento humanizado. Consulte agora pelo WhatsApp.">
-    <meta property="og:url" content="https://www.acsacarlis.adv.br/">
-    <meta property="og:image" content="https://www.acsacarlis.adv.br/assets/img/acsa-carlis.jpg">
+    <meta property="og:url" content="__SITE_URL__/">
+    <meta property="og:image" content="__SITE_URL__/assets/img/acsa-carlis.jpg">
     <meta property="og:site_name" content="Dra. Acsa Carlis - Advocacia Trabalhista">
 
     <!-- Twitter -->
@@ -73,9 +73,9 @@
       "@context": "https://schema.org",
       "@type": "Attorney",
       "name": "Dra. Acsa Carlis - Advocacia Trabalhista",
-      "image": "https://www.acsacarlis.adv.br/assets/img/acsa-carlis.jpg",
+      "image": "__SITE_URL__/assets/img/acsa-carlis.jpg",
       "description": "Advogada Trabalhista em Mogi das Cruzes e Região. Atendimento em São Paulo. Especialista em conflitos trabalhistas.",
-      "url": "https://www.acsacarlis.adv.br/",
+      "url": "__SITE_URL__/",
       "telephone": "+55-11-94507-1408",
       "priceRange": "$$",
       "address": {
@@ -587,15 +587,10 @@
 
     <script src="assets/script.js"></script>
 
-    <!-- Google Tag Manager / Google Ads (substituir pelo ID real na fase 2) -->
-    <!--
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXXX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'AW-XXXXXXXXXX');
-    </script>
-    -->
+    <!-- Google Tag Manager (injetado pelo entrypoint via .env) -->
+    __GTM_SNIPPET__
+
+    <!-- Google Ads (injetado pelo entrypoint via .env) -->
+    __GADS_SNIPPET__
 </body>
 </html>

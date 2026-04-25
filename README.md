@@ -30,26 +30,64 @@ Landing page institucional otimizada para captação via WhatsApp, SEO local e G
 
 ## Antes de subir, configure:
 
-1. **Foto da advogada**: salve a imagem como `site/assets/img/acsa-carlis.jpg`.
-2. **Número de WhatsApp**: substitua `5511945071408` em `site/index.html` pelo número real (formato internacional, sem espaços ou símbolos).
-3. **Domínio**: ajuste todas as URLs `acsacarlis.adv.br` para o domínio definitivo.
-4. **E-mail**: substitua `contato@acsacarlis.adv.br` no rodapé.
-5. **Google Ads (fase 2)**: descomente o bloco do `gtag` no final do `index.html` e ajuste o `AW-XXXXXXXXXX` em `assets/script.js`.
+1. **Foto da advogada**: salve como `site/assets/img/acsa-carlis.jpg`.
+2. **Logo**: já está em `site/assets/img/logo.png` (e `favicon.png`).
+3. **Crie o `.env`**: copie o template e preencha:
+   ```bash
+   cp .env.example .env
+   ```
+   Edite `SITE_URL`. Na fase 2 (Google Ads), preencha `GADS_ID`, `GADS_LABEL` e mude `GADS_ENABLED=true`.
+4. **Número de WhatsApp**: já configurado para `5511945071408`. Caso mude, edite em `site/index.html`.
+5. **E-mail**: substitua `contato@acsacarlis.adv.br` no rodapé.
+
+---
+
+## Variáveis de ambiente (`.env`)
+
+| Variável         | Descrição                                                | Quando preencher        |
+|------------------|----------------------------------------------------------|-------------------------|
+| `GADS_ID`        | ID da conta Google Ads (ex: `AW-1234567890`)             | Fase 2 — campanhas      |
+| `GADS_LABEL`     | Label da conversão de WhatsApp                            | Fase 2 — campanhas      |
+| `GADS_ENABLED`   | `true` para injetar o snippet, `false` para desativar     | Fase 2                  |
+| `GTM_ID`         | (Opcional) ID do Google Tag Manager                       | Se usar GTM             |
+| `SITE_URL`       | URL canônica usada em meta tags e schema.org              | Antes do primeiro deploy|
+| `CONTAINER_NAME` | Nome do container                                         | Opcional                |
+| `IMAGE_TAG`      | Tag da imagem Docker                                      | Opcional                |
+| `HOST_PORT`      | Porta no host se expor sem reverse proxy                  | Opcional                |
+
+O entrypoint do container (`docker-entrypoint.sh`) injeta os snippets no HTML em runtime, então **trocar variáveis no `.env` exige apenas reiniciar** (sem rebuild):
+
+```bash
+docker compose restart
+```
+
+### Como obter `GADS_ID` e `GADS_LABEL`
+
+1. Google Ads → **Ferramentas e configurações** → **Conversões** → **+ Nova ação de conversão**
+2. Escolha **Site**, defina como categoria "Lead" (clique no WhatsApp).
+3. Após criar, clique em **Configurar tag** → "Tag do Google".
+4. O `AW-XXXXXXXXXX` é o ID da conta; o segundo código é o `GADS_LABEL`.
 
 ---
 
 ## Rodando local com Docker
 
 ```bash
+cp .env.example .env   # ajuste os valores antes
 docker compose up -d --build
 ```
 
-Sem `ports` exposto por padrão (uso atrás de reverse proxy / Traefik). Para acesso direto, descomente o bloco `ports` em `docker-compose.yml`.
+Sem `ports` exposto por padrão (uso atrás de reverse proxy / Traefik). Para acesso direto, descomente o bloco `ports` em `docker-compose.yml` (usa `HOST_PORT` do `.env`, default `8080`).
 
 Para parar:
 
 ```bash
 docker compose down
+```
+
+**Trocou o `.env`?** Não precisa rebuild, só reinicie:
+```bash
+docker compose restart
 ```
 
 ---

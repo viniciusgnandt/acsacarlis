@@ -1,0 +1,23 @@
+# Variáveis sensíveis
+.env
+.env.local
+.env.*.local
+
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+npm-debug.log*
+
+# Build artifacts (caso adicionemos build no futuro)
+node_modules/
+dist/
