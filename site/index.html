@@ -585,12 +585,15 @@
     }
     </script>
 
-    <script src="assets/script.js"></script>
-
     <!-- Google Tag Manager (injetado pelo entrypoint via .env) -->
     __GTM_SNIPPET__
 
     <!-- Google Ads (injetado pelo entrypoint via .env) -->
     __GADS_SNIPPET__
+
+    <!-- Define send_to antes do script.js -->
+    <script>window.__GADS_SEND_TO__='__GADS_ID__/__GADS_LABEL__';</script>
+
+    <script src="assets/script.js"></script>
 </body>
 </html>

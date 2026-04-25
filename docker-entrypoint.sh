@@ -50,10 +50,15 @@ GADS_SNIPPET_ESC=$(escape_sed "$GADS_SNIPPET")
 GTM_SNIPPET_ESC=$(escape_sed "$GTM_SNIPPET")
 SITE_URL_ESC=$(escape_sed "$SITE_URL")
 
+GADS_ID_ESC=$(escape_sed "$GADS_ID")
+GADS_LABEL_ESC=$(escape_sed "$GADS_LABEL")
+
 sed -i \
     -e "s|__GADS_SNIPPET__|${GADS_SNIPPET_ESC}|g" \
     -e "s|__GTM_SNIPPET__|${GTM_SNIPPET_ESC}|g" \
     -e "s|__SITE_URL__|${SITE_URL_ESC}|g" \
+    -e "s|__GADS_ID__|${GADS_ID_ESC}|g" \
+    -e "s|__GADS_LABEL__|${GADS_LABEL_ESC}|g" \
     "$INDEX_FILE"
 
 echo "[entrypoint] Configuração aplicada. Iniciando nginx..."
