@@ -1,0 +1,84 @@
+/* Reset complementar e ajustes globais */
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Pulsação no botão flutuante de WhatsApp */
+.wa-pulse {
+    animation: wa-pulse-animation 2.4s infinite;
+}
+
+@keyframes wa-pulse-animation {
+    0% {
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.6),
+                    0 10px 25px -5px rgba(0, 0, 0, 0.3);
+    }
+    70% {
+        box-shadow: 0 0 0 18px rgba(34, 197, 94, 0),
+                    0 10px 25px -5px rgba(0, 0, 0, 0.3);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0),
+                    0 10px 25px -5px rgba(0, 0, 0, 0.3);
+    }
+}
+
+/* Esconde marker padrão do <details> */
+details > summary {
+    list-style: none;
+}
+details > summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Foco acessível */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+    outline: 2px solid #800020;
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+/* Tipografia: scale ligeiramente maior em telas grandes */
+@media (min-width: 1280px) {
+    h1 {
+        letter-spacing: -0.02em;
+    }
+}
+
+/* Performance: prevenir CLS na imagem da hero */
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+
+/* Print friendly: esconder botão flutuante */
+@media print {
+    .wa-pulse,
+    .fixed {
+        display: none !important;
+    }
+}
+
+/* Reduz movimento para usuários com preferência */
+@media (prefers-reduced-motion: reduce) {
+    .wa-pulse {
+        animation: none;
+    }
+    html {
+        scroll-behavior: auto;
+    }
+    * {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
