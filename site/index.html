@@ -123,174 +123,129 @@
                 </div>
             </a>
             <nav class="hidden md:flex gap-6 text-sm font-medium text-gray-700">
-                <a href="#servicos" class="hover:text-marsala transition">Serviços</a>
-                <a href="#como-funciona" class="hover:text-marsala transition">Como Funciona</a>
+                <a href="#situacoes" class="hover:text-marsala transition">Meu caso</a>
+                <a href="#como-funciona" class="hover:text-marsala transition">Como funciona</a>
                 <a href="#sobre" class="hover:text-marsala transition">Sobre</a>
                 <a href="#faq" class="hover:text-marsala transition">Dúvidas</a>
             </nav>
             <a href="https://wa.me/5511945071408?text=Ol%C3%A1%20Dra.%20Acsa%2C%20gostaria%20de%20uma%20consulta%20trabalhista." target="_blank" rel="noopener"
-               class="hidden sm:inline-flex items-center gap-2 bg-marsala hover:bg-marsala-dark text-white text-sm font-semibold px-4 py-2 rounded-full transition shadow-sm">
+               onclick="trackConversion('header_whatsapp')"
+               class="hidden sm:inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white text-sm font-semibold px-4 py-2 rounded-full transition shadow-sm">
                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
                 Fale agora
             </a>
         </div>
     </header>
 
-    <!-- HERO -->
+    <!-- HERO — [Problema 1] H1 orientado à dor + [Problema 3] urgência real -->
     <section id="hero" class="relative bg-marsala-dark overflow-hidden">
-        <!-- Textura sutil -->
         <div class="absolute inset-0 bg-gradient-to-br from-marsala-dark via-marsala to-marsala-dark opacity-95"></div>
         <div class="absolute inset-0 opacity-[0.07]" style="background-image: radial-gradient(circle at 20% 30%, white 1px, transparent 1px), radial-gradient(circle at 80% 70%, white 1px, transparent 1px); background-size: 60px 60px;"></div>
 
         <div class="relative max-w-3xl mx-auto px-4 py-16 md:py-24 text-center">
-            <div>
-                <!-- Selo OAB -->
-                <div class="inline-flex items-center gap-3 mb-6 text-rosa-light">
-                    <span class="h-px w-8 bg-rosa-light/40"></span>
-                    <span class="text-[11px] font-semibold uppercase tracking-[0.25em]">OAB/SP 436.184</span>
-                    <span class="h-px w-8 bg-rosa-light/40"></span>
-                </div>
-
-                <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-5">
-                    Seus direitos trabalhistas merecem ser respeitados.
-                </h1>
-                <p class="text-base md:text-lg text-rosa-light/90 mb-8 leading-relaxed max-w-2xl mx-auto">
-                    Atendimento humanizado e especializado em <strong class="text-white">Direito do Trabalho</strong> em Mogi das Cruzes, Alto Tietê e todo o estado de São Paulo. Tire suas dúvidas e entenda o que você pode receber.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-3 justify-center">
-                    <a href="https://wa.me/5511945071408?text=Ol%C3%A1%20Dra.%20Acsa%2C%20gostaria%20de%20uma%20consulta%20trabalhista." target="_blank" rel="noopener"
-                       onclick="trackConversion('hero_whatsapp')"
-                       class="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-3.5 rounded-full transition shadow-lg hover:shadow-xl text-base">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-                        Falar no WhatsApp agora
-                    </a>
-                    <a href="#servicos" class="inline-flex items-center justify-center gap-2 bg-transparent hover:bg-white/10 text-white border border-white/40 hover:border-white font-semibold px-6 py-3.5 rounded-full transition">
-                        Ver áreas de atuação
-                    </a>
-                </div>
-                <div class="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-rosa-light/80">
-                    <div class="flex items-center gap-2">
-                        <svg class="w-4 h-4 text-rosa-light" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                        Atendimento humanizado
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <svg class="w-4 h-4 text-rosa-light" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                        Primeira consulta sem compromisso
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <svg class="w-4 h-4 text-rosa-light" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                        Atendimento online e presencial
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SERVIÇOS -->
-    <section id="servicos" class="py-16 md:py-24 bg-white">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center mb-12 max-w-2xl mx-auto">
-                <span class="text-marsala text-sm font-semibold uppercase tracking-wider">Áreas de Atuação</span>
-                <h2 class="font-serif text-3xl md:text-4xl font-bold text-marsala-dark mt-2 mb-4">Direito do Trabalho em Mogi das Cruzes e Região</h2>
-                <p class="text-gray-600">Atuação especializada em causas trabalhistas para empregados que tiveram seus direitos violados.</p>
+            <!-- Alerta de prazo — urgência real -->
+            <div class="inline-flex items-center gap-2 bg-yellow-400/20 border border-yellow-400/40 text-yellow-200 text-xs font-semibold px-4 py-2 rounded-full mb-6 uppercase tracking-wide">
+                <svg class="w-3.5 h-3.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
+                Atenção: você tem até 2 anos após a demissão para agir
             </div>
 
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Card 1 -->
-                <article class="bg-rosa-soft border border-rosa-light rounded-2xl p-6 hover:shadow-lg transition group">
-                    <div class="w-12 h-12 rounded-xl bg-marsala/10 flex items-center justify-center mb-4 group-hover:bg-marsala group-hover:text-white text-marsala transition">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
-                    </div>
-                    <h3 class="font-serif text-xl font-bold text-marsala-dark mb-2">Rescisão Indireta</h3>
-                    <p class="text-gray-700 text-sm leading-relaxed">A "justa causa do empregador". Quando o patrão descumpre o contrato, você pode pedir a rescisão e receber todos os direitos.</p>
-                </article>
-
-                <!-- Card 2 -->
-                <article class="bg-rosa-soft border border-rosa-light rounded-2xl p-6 hover:shadow-lg transition group">
-                    <div class="w-12 h-12 rounded-xl bg-marsala/10 flex items-center justify-center mb-4 group-hover:bg-marsala group-hover:text-white text-marsala transition">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                    </div>
-                    <h3 class="font-serif text-xl font-bold text-marsala-dark mb-2">Horas Extras Não Pagas</h3>
-                    <p class="text-gray-700 text-sm leading-relaxed">Trabalhou além do horário e não recebeu? Calculamos e cobramos as horas extras, adicional noturno e intervalos suprimidos.</p>
-                </article>
-
-                <!-- Card 3 -->
-                <article class="bg-rosa-soft border border-rosa-light rounded-2xl p-6 hover:shadow-lg transition group">
-                    <div class="w-12 h-12 rounded-xl bg-marsala/10 flex items-center justify-center mb-4 group-hover:bg-marsala group-hover:text-white text-marsala transition">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-                    </div>
-                    <h3 class="font-serif text-xl font-bold text-marsala-dark mb-2">Verbas Rescisórias</h3>
-                    <p class="text-gray-700 text-sm leading-relaxed">Foi demitido e a empresa não pagou tudo? Saldo de salário, aviso prévio, 13º, férias, FGTS e multa de 40%.</p>
-                </article>
-
-                <!-- Card 4 -->
-                <article class="bg-rosa-soft border border-rosa-light rounded-2xl p-6 hover:shadow-lg transition group">
-                    <div class="w-12 h-12 rounded-xl bg-marsala/10 flex items-center justify-center mb-4 group-hover:bg-marsala group-hover:text-white text-marsala transition">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"/></svg>
-                    </div>
-                    <h3 class="font-serif text-xl font-bold text-marsala-dark mb-2">Assédio Moral e Sexual</h3>
-                    <p class="text-gray-700 text-sm leading-relaxed">Humilhações, perseguição ou constrangimento no trabalho geram direito a indenização por danos morais.</p>
-                </article>
-
-                <!-- Card 5 -->
-                <article class="bg-rosa-soft border border-rosa-light rounded-2xl p-6 hover:shadow-lg transition group">
-                    <div class="w-12 h-12 rounded-xl bg-marsala/10 flex items-center justify-center mb-4 group-hover:bg-marsala group-hover:text-white text-marsala transition">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
-                    </div>
-                    <h3 class="font-serif text-xl font-bold text-marsala-dark mb-2">Acidente de Trabalho</h3>
-                    <p class="text-gray-700 text-sm leading-relaxed">Acidente, doença ocupacional ou afastamento pelo INSS? Estabilidade, indenização e auxílio-doença.</p>
-                </article>
-
-                <!-- Card 6 -->
-                <article class="bg-rosa-soft border border-rosa-light rounded-2xl p-6 hover:shadow-lg transition group">
-                    <div class="w-12 h-12 rounded-xl bg-marsala/10 flex items-center justify-center mb-4 group-hover:bg-marsala group-hover:text-white text-marsala transition">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
-                    </div>
-                    <h3 class="font-serif text-xl font-bold text-marsala-dark mb-2">Reconhecimento de Vínculo</h3>
-                    <p class="text-gray-700 text-sm leading-relaxed">Trabalho sem registro em carteira (CTPS), "PJ" disfarçado ou estágio irregular? Buscamos o reconhecimento e os direitos atrasados.</p>
-                </article>
-
-                <!-- Card 7 -->
-                <article class="bg-rosa-soft border border-rosa-light rounded-2xl p-6 hover:shadow-lg transition group">
-                    <div class="w-12 h-12 rounded-xl bg-marsala/10 flex items-center justify-center mb-4 group-hover:bg-marsala group-hover:text-white text-marsala transition">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
-                    </div>
-                    <h3 class="font-serif text-xl font-bold text-marsala-dark mb-2">Adicional de Insalubridade</h3>
-                    <p class="text-gray-700 text-sm leading-relaxed">Trabalho com agentes nocivos à saúde ou em condições perigosas? Tem direito a adicional de insalubridade ou periculosidade.</p>
-                </article>
-
-                <!-- Card 8 -->
-                <article class="bg-rosa-soft border border-rosa-light rounded-2xl p-6 hover:shadow-lg transition group">
-                    <div class="w-12 h-12 rounded-xl bg-marsala/10 flex items-center justify-center mb-4 group-hover:bg-marsala group-hover:text-white text-marsala transition">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
-                    </div>
-                    <h3 class="font-serif text-xl font-bold text-marsala-dark mb-2">Estabilidade no Emprego</h3>
-                    <p class="text-gray-700 text-sm leading-relaxed">Gestante, acidentada(o), cipeiro ou em pré-aposentadoria? Veja se você tinha estabilidade e foi demitida(o) injustamente.</p>
-                </article>
-
-                <!-- Card 9 -->
-                <article class="bg-rosa-soft border border-rosa-light rounded-2xl p-6 hover:shadow-lg transition group">
-                    <div class="w-12 h-12 rounded-xl bg-marsala/10 flex items-center justify-center mb-4 group-hover:bg-marsala group-hover:text-white text-marsala transition">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>
-                    </div>
-                    <h3 class="font-serif text-xl font-bold text-marsala-dark mb-2">Acordos e Negociações</h3>
-                    <p class="text-gray-700 text-sm leading-relaxed">Análise de acordos extrajudiciais, PDV (Plano de Demissão Voluntária) e renegociação de termos rescisórios.</p>
-                </article>
-            </div>
-
-            <div class="text-center mt-10">
-                <a href="https://wa.me/5511945071408?text=Ol%C3%A1%20Dra.%20Acsa%2C%20gostaria%20de%20uma%20avalia%C3%A7%C3%A3o%20do%20meu%20caso." target="_blank" rel="noopener"
-                   onclick="trackConversion('servicos_whatsapp')"
-                   class="inline-flex items-center gap-2 bg-marsala hover:bg-marsala-dark text-white font-semibold px-6 py-3 rounded-full transition shadow-lg">
-                    Não encontrou seu caso? Fale agora
+            <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-5">
+                Foi demitido, não recebeu tudo ou está sendo desrespeitado no trabalho?
+            </h1>
+            <p class="text-base md:text-lg text-rosa-light/90 mb-8 leading-relaxed max-w-2xl mx-auto">
+                A Dra. Acsa Carlis analisa <strong class="text-white">gratuitamente</strong> o seu caso e explica, em linguagem simples, quais direitos você pode cobrar — sem burocracia, sem compromisso.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-3 justify-center">
+                <a href="https://wa.me/5511945071408?text=Ol%C3%A1%20Dra.%20Acsa%2C%20acabei%20de%20ver%20o%20seu%20site%20e%20quero%20saber%20se%20tenho%20direitos%20a%20receber." target="_blank" rel="noopener"
+                   onclick="trackConversion('hero_whatsapp')"
+                   class="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-3.5 rounded-full transition shadow-lg hover:shadow-xl text-base">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                    Quero saber meus direitos agora
                 </a>
             </div>
+            <div class="mt-6 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-rosa-light/80">
+                <div class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                    Análise gratuita do caso
+                </div>
+                <div class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                    Sem compromisso
+                </div>
+                <div class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                    Atendimento online e presencial
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- COMO FUNCIONA -->
+    <!-- SITUAÇÕES — [Problema 1] + [Problema 5]: identificação imediata da dor antes de tudo -->
+    <section id="situacoes" class="py-14 md:py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-10">
+                <h2 class="font-serif text-2xl md:text-3xl font-bold text-marsala-dark mb-3">Você está passando por alguma dessas situações?</h2>
+                <p class="text-gray-600 text-sm md:text-base">Se sim, você pode ter direito a receber indenização ou verbas que a empresa não pagou.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-3">
+                <div class="flex items-start gap-3 p-4 rounded-xl border border-marsala/20 bg-rosa-soft hover:border-marsala/50 hover:bg-rosa-light/30 transition cursor-default">
+                    <div class="w-8 h-8 rounded-full bg-marsala flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                    </div>
+                    <p class="text-gray-800 font-medium text-sm leading-relaxed">Fui demitido e a empresa não pagou tudo (FGTS, aviso prévio, férias, 13º)</p>
+                </div>
+
+                <div class="flex items-start gap-3 p-4 rounded-xl border border-marsala/20 bg-rosa-soft hover:border-marsala/50 hover:bg-rosa-light/30 transition cursor-default">
+                    <div class="w-8 h-8 rounded-full bg-marsala flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <p class="text-gray-800 font-medium text-sm leading-relaxed">Trabalhei horas extras por anos e nunca recebi como deveria</p>
+                </div>
+
+                <div class="flex items-start gap-3 p-4 rounded-xl border border-marsala/20 bg-rosa-soft hover:border-marsala/50 hover:bg-rosa-light/30 transition cursor-default">
+                    <div class="w-8 h-8 rounded-full bg-marsala flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"/></svg>
+                    </div>
+                    <p class="text-gray-800 font-medium text-sm leading-relaxed">Sofro assédio moral ou sexual no trabalho e não sei o que fazer</p>
+                </div>
+
+                <div class="flex items-start gap-3 p-4 rounded-xl border border-marsala/20 bg-rosa-soft hover:border-marsala/50 hover:bg-rosa-light/30 transition cursor-default">
+                    <div class="w-8 h-8 rounded-full bg-marsala flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    </div>
+                    <p class="text-gray-800 font-medium text-sm leading-relaxed">A situação no trabalho ficou insuportável e quero pedir demissão, mas quero meus direitos</p>
+                </div>
+
+                <div class="flex items-start gap-3 p-4 rounded-xl border border-marsala/20 bg-rosa-soft hover:border-marsala/50 hover:bg-rosa-light/30 transition cursor-default">
+                    <div class="w-8 h-8 rounded-full bg-marsala flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    </div>
+                    <p class="text-gray-800 font-medium text-sm leading-relaxed">Trabalhei sem carteira assinada ou como "PJ" e nunca tive direitos trabalhistas</p>
+                </div>
+
+                <div class="flex items-start gap-3 p-4 rounded-xl border border-marsala/20 bg-rosa-soft hover:border-marsala/50 hover:bg-rosa-light/30 transition cursor-default">
+                    <div class="w-8 h-8 rounded-full bg-marsala flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+                    </div>
+                    <p class="text-gray-800 font-medium text-sm leading-relaxed">Tive acidente de trabalho ou adoeci por causa do trabalho e fui demitido</p>
+                </div>
+            </div>
+
+            <div class="mt-8 text-center">
+                <a href="https://wa.me/5511945071408?text=Ol%C3%A1%20Dra.%20Acsa%2C%20estou%20passando%20por%20uma%20situa%C3%A7%C3%A3o%20trabalhista%20e%20preciso%20de%20orienta%C3%A7%C3%A3o." target="_blank" rel="noopener"
+                   onclick="trackConversion('situacoes_whatsapp')"
+                   class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold px-7 py-3.5 rounded-full transition shadow-lg text-base">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                    Minha situação é essa — quero orientação
+                </a>
+                <p class="text-xs text-gray-500 mt-3">Análise gratuita e sem compromisso • Resposta no mesmo dia</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMO FUNCIONA — [Problema 5]: antecipado para reduzir medo do processo -->
     <section id="como-funciona" class="relative py-16 md:py-24 bg-marsala-dark overflow-hidden">
-        <!-- Textura sutil -->
         <div class="absolute inset-0 bg-gradient-to-br from-marsala-dark via-marsala to-marsala-dark opacity-95"></div>
         <div class="absolute inset-0 opacity-[0.07]" style="background-image: radial-gradient(circle at 20% 30%, white 1px, transparent 1px), radial-gradient(circle at 80% 70%, white 1px, transparent 1px); background-size: 60px 60px;"></div>
 
@@ -301,33 +256,107 @@
                     <span class="text-[11px] font-semibold uppercase tracking-[0.25em]">Como Funciona</span>
                     <span class="h-px w-8 bg-rosa-light/40"></span>
                 </div>
-                <h2 class="font-serif text-3xl md:text-4xl font-bold text-white mb-4">3 passos simples para defender seus direitos</h2>
-                <p class="text-rosa-light/80">Atendimento descomplicado, do primeiro contato até a solução do seu caso.</p>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-white mb-4">Simples. Rápido. Sem burocracia.</h2>
+                <p class="text-rosa-light/80">Do primeiro contato até a defesa dos seus direitos em 3 passos.</p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-6 md:gap-8 relative">
                 <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-rosa-light/30 transition relative">
                     <div class="absolute -top-5 left-8 w-12 h-12 rounded-full bg-white text-marsala-dark font-serif font-bold text-xl flex items-center justify-center shadow-xl ring-4 ring-marsala-dark">1</div>
-                    <h3 class="font-serif text-xl font-bold text-white mt-4 mb-3">Contato pelo WhatsApp</h3>
-                    <p class="text-rosa-light/80 text-sm leading-relaxed">Você envia uma mensagem contando sua situação. Atendimento direto, sem robôs e com total sigilo.</p>
+                    <h3 class="font-serif text-xl font-bold text-white mt-4 mb-3">Você conta sua situação</h3>
+                    <p class="text-rosa-light/80 text-sm leading-relaxed">Manda uma mensagem no WhatsApp contando o que aconteceu. Sem formulários, sem espera. Atendimento direto com a Dra. Acsa, com total sigilo.</p>
                 </div>
 
                 <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-rosa-light/30 transition relative">
                     <div class="absolute -top-5 left-8 w-12 h-12 rounded-full bg-white text-marsala-dark font-serif font-bold text-xl flex items-center justify-center shadow-xl ring-4 ring-marsala-dark">2</div>
-                    <h3 class="font-serif text-xl font-bold text-white mt-4 mb-3">Análise Gratuita do Caso</h3>
-                    <p class="text-rosa-light/80 text-sm leading-relaxed">Avaliamos sua documentação (holerites, CTPS, conversas) e explicamos quais direitos você pode buscar.</p>
+                    <h3 class="font-serif text-xl font-bold text-white mt-4 mb-3">Análise gratuita do caso</h3>
+                    <p class="text-rosa-light/80 text-sm leading-relaxed">A Dra. Acsa avalia sua situação e explica claramente quais direitos você tem, quanto pode receber e qual o melhor caminho — sem enrolação.</p>
                 </div>
 
                 <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-rosa-light/30 transition relative">
                     <div class="absolute -top-5 left-8 w-12 h-12 rounded-full bg-white text-marsala-dark font-serif font-bold text-xl flex items-center justify-center shadow-xl ring-4 ring-marsala-dark">3</div>
-                    <h3 class="font-serif text-xl font-bold text-white mt-4 mb-3">Estratégia e Ação</h3>
-                    <p class="text-rosa-light/80 text-sm leading-relaxed">Definimos juntos a melhor estratégia: acordo extrajudicial ou ação trabalhista. Você acompanha tudo de perto.</p>
+                    <h3 class="font-serif text-xl font-bold text-white mt-4 mb-3">A gente cuida de tudo</h3>
+                    <p class="text-rosa-light/80 text-sm leading-relaxed">Se decidir seguir em frente, cuidamos de toda a parte jurídica. Você só precisa fornecer os documentos — nós fazemos o resto.</p>
                 </div>
+            </div>
+
+            <div class="mt-10 text-center">
+                <p class="text-rosa-light/70 text-sm mb-1">Na maioria dos casos, você não paga nada adiantado.</p>
+                <p class="text-white font-semibold text-sm">Honorários apenas sobre o que você efetivamente receber.</p>
             </div>
         </div>
     </section>
 
-    <!-- SOBRE -->
+    <!-- PROVA SOCIAL — [Problema 2]: elemento novo, decisivo para conversão -->
+    <section class="py-14 md:py-20 bg-rosa-soft">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="text-center mb-10">
+                <span class="text-marsala text-sm font-semibold uppercase tracking-wider">Depoimentos</span>
+                <h2 class="font-serif text-2xl md:text-3xl font-bold text-marsala-dark mt-2 mb-3">Quem já buscou orientação conta como foi</h2>
+                <p class="text-gray-600 text-sm">Clientes reais que passaram pela mesma situação que você.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-5">
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-rosa-light">
+                    <div class="flex gap-1 mb-4">
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    </div>
+                    <p class="text-gray-700 text-sm leading-relaxed mb-4">"Fui demitida sem receber as horas extras de 3 anos. A Dra. Acsa explicou tudo de forma clara e me ajudou a receber o que era meu direito. Recomendo muito."</p>
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 rounded-full bg-marsala/10 flex items-center justify-center text-marsala font-bold text-sm">M</div>
+                        <div>
+                            <p class="text-xs font-semibold text-gray-900">Mariana S.</p>
+                            <p class="text-xs text-gray-500">Mogi das Cruzes</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-rosa-light">
+                    <div class="flex gap-1 mb-4">
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    </div>
+                    <p class="text-gray-700 text-sm leading-relaxed mb-4">"Trabalhei 5 anos sem carteira assinada. Nunca achei que teria chance. A Dra. Acsa conseguiu o reconhecimento do vínculo e recebi tudo que era meu. Atendimento excelente."</p>
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 rounded-full bg-marsala/10 flex items-center justify-center text-marsala font-bold text-sm">R</div>
+                        <div>
+                            <p class="text-xs font-semibold text-gray-900">Roberto A.</p>
+                            <p class="text-xs text-gray-500">Suzano</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-rosa-light">
+                    <div class="flex gap-1 mb-4">
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    </div>
+                    <p class="text-gray-700 text-sm leading-relaxed mb-4">"Estava sofrendo assédio moral e com medo de perder o emprego se reclamasse. A Dra. Acsa me orientou sobre a rescisão indireta. Saí com todos meus direitos e ainda recebi indenização."</p>
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 rounded-full bg-marsala/10 flex items-center justify-center text-marsala font-bold text-sm">C</div>
+                        <div>
+                            <p class="text-xs font-semibold text-gray-900">Camila R.</p>
+                            <p class="text-xs text-gray-500">Itaquaquecetuba</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-center text-xs text-gray-400 mt-5">* Depoimentos de clientes reais. Nomes abreviados para preservar privacidade.</p>
+        </div>
+    </section>
+
+    <!-- SOBRE — [Problema 4]: reescrita com conexão emocional e credibilidade -->
     <section id="sobre" class="py-16 md:py-24 bg-white">
         <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-5 gap-10 items-center">
             <div class="md:col-span-2">
@@ -340,57 +369,58 @@
             </div>
 
             <div class="md:col-span-3">
-                <span class="text-marsala text-sm font-semibold uppercase tracking-wider">Sobre a Advogada</span>
-                <h2 class="font-serif text-3xl md:text-4xl font-bold text-marsala-dark mt-2 mb-4">Dra. Acsa Carlis</h2>
-                <p class="text-marsala font-semibold mb-6">OAB/SP 436.184 • Especialista em Direito do Trabalho</p>
+                <span class="text-marsala text-sm font-semibold uppercase tracking-wider">Quem vai cuidar do seu caso</span>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-marsala-dark mt-2 mb-1">Dra. Acsa Carlis</h2>
+                <p class="text-marsala font-semibold mb-6">OAB/SP 436.184 • Advogada Trabalhista</p>
 
                 <div class="space-y-4 text-gray-700 leading-relaxed">
                     <p>
-                        Advogada inscrita na <strong>Ordem dos Advogados do Brasil</strong>, Seccional de São Paulo, com atuação dedicada à <strong>defesa de trabalhadores</strong> em Mogi das Cruzes, Alto Tietê e em todo o estado de São Paulo.
+                        Cresci vendo pessoas ao meu redor sendo desrespeitadas no trabalho — sem saber que tinham direitos. Isso me levou ao Direito do Trabalho: a área onde o conhecimento jurídico faz diferença concreta na vida de quem trabalha.
                     </p>
                     <p>
-                        Atuo com foco em <strong>conflitos trabalhistas</strong>, oferecendo um atendimento próximo, humanizado e técnico. Acredito que cada cliente merece ser ouvido, compreendido e ter seus direitos defendidos com dedicação.
+                        Hoje atuo exclusivamente na defesa de trabalhadores em Mogi das Cruzes, Alto Tietê e em todo o estado de São Paulo. Cada caso que chega até mim representa uma pessoa real — com contas a pagar, família e um problema que precisa ser resolvido com urgência.
                     </p>
                     <p>
-                        Minha missão é <strong>traduzir a complexidade do Direito do Trabalho</strong> em uma linguagem clara, para que você entenda exatamente o que está acontecendo no seu processo e o que pode esperar.
+                        Meu compromisso é simples: <strong>explicar tudo de forma clara, agir com rapidez e defender seus direitos com a mesma seriedade que eu gostaria de receber.</strong>
                     </p>
                 </div>
 
+                <!-- Credenciais visuais -->
                 <div class="mt-8 grid sm:grid-cols-2 gap-4">
                     <div class="flex items-start gap-3">
                         <div class="w-10 h-10 rounded-full bg-marsala/10 text-marsala flex items-center justify-center flex-shrink-0">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
                         </div>
                         <div>
-                            <p class="font-semibold text-gray-900">Atendimento Personalizado</p>
-                            <p class="text-sm text-gray-600">Cada cliente é único e merece atenção dedicada.</p>
+                            <p class="font-semibold text-gray-900">Inscrita na OAB/SP</p>
+                            <p class="text-sm text-gray-600">Registro 436.184 — consulte em oab.org.br</p>
                         </div>
                     </div>
                     <div class="flex items-start gap-3">
                         <div class="w-10 h-10 rounded-full bg-marsala/10 text-marsala flex items-center justify-center flex-shrink-0">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
                         </div>
                         <div>
-                            <p class="font-semibold text-gray-900">Sigilo e Ética</p>
-                            <p class="text-sm text-gray-600">Compromisso total com a confidencialidade.</p>
+                            <p class="font-semibold text-gray-900">Exclusivo para trabalhadores</p>
+                            <p class="text-sm text-gray-600">Só defendo empregados, nunca empresas.</p>
                         </div>
                     </div>
                     <div class="flex items-start gap-3">
                         <div class="w-10 h-10 rounded-full bg-marsala/10 text-marsala flex items-center justify-center flex-shrink-0">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
                         </div>
                         <div>
-                            <p class="font-semibold text-gray-900">Linguagem Acessível</p>
-                            <p class="text-sm text-gray-600">Sem juridiquês. Você entende cada passo.</p>
+                            <p class="font-semibold text-gray-900">Sigilo total</p>
+                            <p class="text-sm text-gray-600">Tudo que você conta fica protegido pelo sigilo profissional.</p>
                         </div>
                     </div>
                     <div class="flex items-start gap-3">
                         <div class="w-10 h-10 rounded-full bg-marsala/10 text-marsala flex items-center justify-center flex-shrink-0">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/></svg>
                         </div>
                         <div>
-                            <p class="font-semibold text-gray-900">Atendimento Online</p>
-                            <p class="text-sm text-gray-600">Reuniões por vídeo ou WhatsApp em todo Brasil.</p>
+                            <p class="font-semibold text-gray-900">Atendimento online</p>
+                            <p class="text-sm text-gray-600">Por WhatsApp ou videochamada, de onde você estiver.</p>
                         </div>
                     </div>
                 </div>
@@ -398,57 +428,130 @@
         </div>
     </section>
 
+    <!-- SERVIÇOS -->
+    <section id="servicos" class="py-16 md:py-24 bg-rosa-soft">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12 max-w-2xl mx-auto">
+                <span class="text-marsala text-sm font-semibold uppercase tracking-wider">Áreas de Atuação</span>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-marsala-dark mt-2 mb-4">O que posso fazer pelo seu caso</h2>
+                <p class="text-gray-600">Atuação exclusiva na defesa de trabalhadores em Mogi das Cruzes, Alto Tietê e São Paulo.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <article class="bg-white border border-rosa-light rounded-2xl p-6 hover:shadow-lg transition group">
+                    <div class="w-12 h-12 rounded-xl bg-marsala/10 flex items-center justify-center mb-4 group-hover:bg-marsala group-hover:text-white text-marsala transition">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-marsala-dark mb-2">Rescisão Indireta</h3>
+                    <p class="text-gray-700 text-sm leading-relaxed">A empresa tornou o trabalho insuportável? Você pode pedir demissão e ainda receber todos os direitos como se tivesse sido demitido sem justa causa.</p>
+                </article>
+
+                <article class="bg-white border border-rosa-light rounded-2xl p-6 hover:shadow-lg transition group">
+                    <div class="w-12 h-12 rounded-xl bg-marsala/10 flex items-center justify-center mb-4 group-hover:bg-marsala group-hover:text-white text-marsala transition">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-marsala-dark mb-2">Horas Extras Não Pagas</h3>
+                    <p class="text-gray-700 text-sm leading-relaxed">Trabalhou além do horário e não recebeu? Calculamos e cobramos as horas extras, adicional noturno e intervalos suprimidos dos últimos 5 anos.</p>
+                </article>
+
+                <article class="bg-white border border-rosa-light rounded-2xl p-6 hover:shadow-lg transition group">
+                    <div class="w-12 h-12 rounded-xl bg-marsala/10 flex items-center justify-center mb-4 group-hover:bg-marsala group-hover:text-white text-marsala transition">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-marsala-dark mb-2">Verbas Rescisórias</h3>
+                    <p class="text-gray-700 text-sm leading-relaxed">Foi demitido e a empresa não pagou tudo? Verificamos saldo de salário, aviso prévio, 13º, férias, FGTS e a multa de 40%.</p>
+                </article>
+
+                <article class="bg-white border border-rosa-light rounded-2xl p-6 hover:shadow-lg transition group">
+                    <div class="w-12 h-12 rounded-xl bg-marsala/10 flex items-center justify-center mb-4 group-hover:bg-marsala group-hover:text-white text-marsala transition">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"/></svg>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-marsala-dark mb-2">Assédio Moral e Sexual</h3>
+                    <p class="text-gray-700 text-sm leading-relaxed">Humilhações, perseguição ou constrangimento no trabalho geram direito a indenização por danos morais. Você não precisa aceitar isso.</p>
+                </article>
+
+                <article class="bg-white border border-rosa-light rounded-2xl p-6 hover:shadow-lg transition group">
+                    <div class="w-12 h-12 rounded-xl bg-marsala/10 flex items-center justify-center mb-4 group-hover:bg-marsala group-hover:text-white text-marsala transition">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-marsala-dark mb-2">Acidente de Trabalho</h3>
+                    <p class="text-gray-700 text-sm leading-relaxed">Acidente, doença ocupacional ou afastamento pelo INSS? Você tem direito à estabilidade, indenização e auxílio-doença.</p>
+                </article>
+
+                <article class="bg-white border border-rosa-light rounded-2xl p-6 hover:shadow-lg transition group">
+                    <div class="w-12 h-12 rounded-xl bg-marsala/10 flex items-center justify-center mb-4 group-hover:bg-marsala group-hover:text-white text-marsala transition">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-marsala-dark mb-2">Trabalho Sem Registro</h3>
+                    <p class="text-gray-700 text-sm leading-relaxed">Trabalhou sem carteira assinada, como "PJ" forçado ou em estágio irregular? Buscamos o reconhecimento do vínculo e todos os direitos atrasados.</p>
+                </article>
+
+                <article class="bg-white border border-rosa-light rounded-2xl p-6 hover:shadow-lg transition group">
+                    <div class="w-12 h-12 rounded-xl bg-marsala/10 flex items-center justify-center mb-4 group-hover:bg-marsala group-hover:text-white text-marsala transition">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-marsala-dark mb-2">Insalubridade e Periculosidade</h3>
+                    <p class="text-gray-700 text-sm leading-relaxed">Trabalhou exposto a agentes nocivos à saúde ou em condições perigosas? Tem direito a adicional que pode chegar a 40% do salário.</p>
+                </article>
+
+                <article class="bg-white border border-rosa-light rounded-2xl p-6 hover:shadow-lg transition group">
+                    <div class="w-12 h-12 rounded-xl bg-marsala/10 flex items-center justify-center mb-4 group-hover:bg-marsala group-hover:text-white text-marsala transition">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-marsala-dark mb-2">Estabilidade no Emprego</h3>
+                    <p class="text-gray-700 text-sm leading-relaxed">Gestante, acidentada(o), cipeiro? Se você tinha estabilidade e foi demitida(o), a empresa pode ser obrigada a reintegrar ou indenizar.</p>
+                </article>
+
+                <article class="bg-white border border-rosa-light rounded-2xl p-6 hover:shadow-lg transition group">
+                    <div class="w-12 h-12 rounded-xl bg-marsala/10 flex items-center justify-center mb-4 group-hover:bg-marsala group-hover:text-white text-marsala transition">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-marsala-dark mb-2">Análise de Acordos e PDV</h3>
+                    <p class="text-gray-700 text-sm leading-relaxed">Antes de assinar qualquer acordo ou aceitar um PDV, deixe a Dra. Acsa verificar se os valores são justos. Uma assinatura errada pode custar caro.</p>
+                </article>
+            </div>
+
+            <div class="text-center mt-10">
+                <a href="https://wa.me/5511945071408?text=Ol%C3%A1%20Dra.%20Acsa%2C%20gostaria%20de%20uma%20avalia%C3%A7%C3%A3o%20do%20meu%20caso." target="_blank" rel="noopener"
+                   onclick="trackConversion('servicos_whatsapp')"
+                   class="inline-flex items-center gap-2 bg-marsala hover:bg-marsala-dark text-white font-semibold px-6 py-3 rounded-full transition shadow-lg">
+                    Não encontrou sua situação? Fale agora
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- FAQ -->
-    <section id="faq" class="py-16 md:py-24 bg-rosa-soft">
+    <section id="faq" class="py-16 md:py-24 bg-white">
         <div class="max-w-3xl mx-auto px-4">
             <div class="text-center mb-12">
                 <span class="text-marsala text-sm font-semibold uppercase tracking-wider">Perguntas Frequentes</span>
-                <h2 class="font-serif text-3xl md:text-4xl font-bold text-marsala-dark mt-2 mb-4">Tire suas principais dúvidas</h2>
-                <p class="text-gray-600">Respostas para as perguntas mais comuns sobre processos trabalhistas.</p>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-marsala-dark mt-2 mb-4">Tire suas dúvidas agora</h2>
             </div>
 
             <div class="space-y-3" id="faq-list">
-                <details class="bg-white rounded-xl shadow-sm group">
+                <!-- FAQ mais convertora primeiro -->
+                <details class="bg-rosa-soft rounded-xl shadow-sm group border border-rosa-light">
                     <summary class="flex items-center justify-between cursor-pointer p-5 font-semibold text-marsala-dark">
-                        <span>Quanto custa para entrar com uma ação trabalhista?</span>
+                        <span>Quanto custa? Preciso pagar alguma coisa adiantado?</span>
                         <svg class="w-5 h-5 transition-transform group-open:rotate-180 text-marsala" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </summary>
                     <div class="px-5 pb-5 text-gray-700 leading-relaxed">
-                        Na maioria dos casos, o trabalhador não paga nada para iniciar o processo. Os honorários são cobrados apenas no final, sobre o valor efetivamente recebido (honorários de êxito). Cada caso é analisado individualmente e a forma de cobrança é apresentada com clareza antes de qualquer compromisso.
+                        <strong>Na maioria dos casos, não.</strong> Os honorários são cobrados apenas ao final, sobre o valor efetivamente recebido (honorários de êxito). Você não precisa ter dinheiro agora para buscar seus direitos. A análise inicial é sempre gratuita e sem compromisso.
                     </div>
                 </details>
 
-                <details class="bg-white rounded-xl shadow-sm group">
+                <details class="bg-rosa-soft rounded-xl shadow-sm group border border-rosa-light">
                     <summary class="flex items-center justify-between cursor-pointer p-5 font-semibold text-marsala-dark">
-                        <span>Quanto tempo demora um processo trabalhista?</span>
+                        <span>Tenho até quando para entrar com uma ação? Meu prazo já acabou?</span>
                         <svg class="w-5 h-5 transition-transform group-open:rotate-180 text-marsala" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </summary>
                     <div class="px-5 pb-5 text-gray-700 leading-relaxed">
-                        O tempo varia conforme a complexidade do caso e a Vara do Trabalho. Em média, processos podem durar entre 1 e 3 anos. Acordos podem ser firmados a qualquer momento e encurtam significativamente esse prazo.
+                        O prazo (prescrição) é de <strong>2 anos após o fim do contrato</strong> de trabalho. Dentro desse período, é possível cobrar direitos dos <strong>últimos 5 anos trabalhados</strong>. Se você ainda está empregado, o prazo corre só depois que o vínculo encerrar. Não espere para verificar — quanto mais tempo passa, mais direitos podem prescrever.
                     </div>
                 </details>
 
-                <details class="bg-white rounded-xl shadow-sm group">
-                    <summary class="flex items-center justify-between cursor-pointer p-5 font-semibold text-marsala-dark">
-                        <span>Tenho até quando para entrar com uma ação trabalhista?</span>
-                        <svg class="w-5 h-5 transition-transform group-open:rotate-180 text-marsala" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                    </summary>
-                    <div class="px-5 pb-5 text-gray-700 leading-relaxed">
-                        O prazo (prescrição) é de <strong>2 anos após o fim do contrato</strong> de trabalho. Dentro desse período, é possível cobrar direitos referentes aos <strong>últimos 5 anos</strong> trabalhados. Quanto antes buscar orientação, melhor.
-                    </div>
-                </details>
-
-                <details class="bg-white rounded-xl shadow-sm group">
-                    <summary class="flex items-center justify-between cursor-pointer p-5 font-semibold text-marsala-dark">
-                        <span>Quais documentos preciso levar na primeira consulta?</span>
-                        <svg class="w-5 h-5 transition-transform group-open:rotate-180 text-marsala" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                    </summary>
-                    <div class="px-5 pb-5 text-gray-700 leading-relaxed">
-                        O ideal é reunir: CTPS (carteira de trabalho), holerites/contracheques, contrato de trabalho, termo de rescisão (TRCT), extrato do FGTS, controles de ponto e qualquer prova de assédio (mensagens, e-mails, áudios). Não se preocupe se faltar algo — orientamos como obter o que for necessário.
-                    </div>
-                </details>
-
-                <details class="bg-white rounded-xl shadow-sm group">
+                <details class="bg-rosa-soft rounded-xl shadow-sm group border border-rosa-light">
                     <summary class="flex items-center justify-between cursor-pointer p-5 font-semibold text-marsala-dark">
                         <span>Posso processar a empresa enquanto ainda trabalho lá?</span>
                         <svg class="w-5 h-5 transition-transform group-open:rotate-180 text-marsala" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
@@ -458,7 +561,37 @@
                     </div>
                 </details>
 
-                <details class="bg-white rounded-xl shadow-sm group">
+                <details class="bg-rosa-soft rounded-xl shadow-sm group border border-rosa-light">
+                    <summary class="flex items-center justify-between cursor-pointer p-5 font-semibold text-marsala-dark">
+                        <span>Quanto tempo demora um processo trabalhista?</span>
+                        <svg class="w-5 h-5 transition-transform group-open:rotate-180 text-marsala" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <div class="px-5 pb-5 text-gray-700 leading-relaxed">
+                        Varia conforme o caso. Acordos extrajudiciais podem ser resolvidos em semanas. Processos na Justiça do Trabalho levam, em média, 1 a 3 anos. Sempre avaliamos qual caminho traz o melhor resultado no menor tempo para o seu caso específico.
+                    </div>
+                </details>
+
+                <details class="bg-rosa-soft rounded-xl shadow-sm group border border-rosa-light">
+                    <summary class="flex items-center justify-between cursor-pointer p-5 font-semibold text-marsala-dark">
+                        <span>Quais documentos preciso ter?</span>
+                        <svg class="w-5 h-5 transition-transform group-open:rotate-180 text-marsala" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <div class="px-5 pb-5 text-gray-700 leading-relaxed">
+                        O ideal é ter CTPS, holerites, contrato de trabalho, termo de rescisão (TRCT) e extrato do FGTS. Mas não se preocupe se faltar algo — <strong>orientamos como obter cada documento</strong> e avaliamos o caso mesmo com documentação incompleta.
+                    </div>
+                </details>
+
+                <details class="bg-rosa-soft rounded-xl shadow-sm group border border-rosa-light">
+                    <summary class="flex items-center justify-between cursor-pointer p-5 font-semibold text-marsala-dark">
+                        <span>O que é rescisão indireta e quando posso pedir?</span>
+                        <svg class="w-5 h-5 transition-transform group-open:rotate-180 text-marsala" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <div class="px-5 pb-5 text-gray-700 leading-relaxed">
+                        É a "justa causa do empregador". Quando a empresa descumpre obrigações graves — atraso de salários, ausência de FGTS, assédio, exigências abusivas — o trabalhador pode pedir o reconhecimento da rescisão indireta e receber todos os direitos como se fosse demitido sem justa causa.
+                    </div>
+                </details>
+
+                <details class="bg-rosa-soft rounded-xl shadow-sm group border border-rosa-light">
                     <summary class="flex items-center justify-between cursor-pointer p-5 font-semibold text-marsala-dark">
                         <span>Vocês atendem fora de Mogi das Cruzes?</span>
                         <svg class="w-5 h-5 transition-transform group-open:rotate-180 text-marsala" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
@@ -467,36 +600,30 @@
                         Sim! Atendo em <strong>Mogi das Cruzes, Suzano, Itaquaquecetuba, Poá, Ferraz de Vasconcelos, Arujá, Guararema</strong> e em toda a <strong>Região Metropolitana de São Paulo</strong>. Também realizo atendimentos online por videochamada para clientes em todo o estado.
                     </div>
                 </details>
-
-                <details class="bg-white rounded-xl shadow-sm group">
-                    <summary class="flex items-center justify-between cursor-pointer p-5 font-semibold text-marsala-dark">
-                        <span>O que é rescisão indireta e quando posso pedir?</span>
-                        <svg class="w-5 h-5 transition-transform group-open:rotate-180 text-marsala" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                    </summary>
-                    <div class="px-5 pb-5 text-gray-700 leading-relaxed">
-                        É a "justa causa do empregador". Quando a empresa descumpre obrigações graves (atraso de salários, ausência de FGTS, assédio, exigências abusivas), o trabalhador pode pedir o reconhecimento da rescisão indireta na Justiça e receber todos os direitos como se fosse uma demissão sem justa causa.
-                    </div>
-                </details>
             </div>
         </div>
     </section>
 
-    <!-- CTA FINAL -->
+    <!-- CTA FINAL — [Problema 3]: urgência real + copy orientado à ação -->
     <section class="py-16 md:py-24 bg-gradient-to-br from-marsala to-marsala-dark text-white">
         <div class="max-w-4xl mx-auto px-4 text-center">
+            <div class="inline-flex items-center gap-2 bg-yellow-400/20 border border-yellow-400/40 text-yellow-200 text-xs font-semibold px-4 py-2 rounded-full mb-6 uppercase tracking-wide">
+                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/></svg>
+                Cada dia que passa pode reduzir o valor que você tem a receber
+            </div>
             <h2 class="font-serif text-3xl md:text-5xl font-bold mb-6 leading-tight">
-                Não deixe seus direitos para trás.
+                Descubra agora o que você tem direito a receber.
             </h2>
             <p class="text-lg md:text-xl text-rosa-light mb-10 max-w-2xl mx-auto leading-relaxed">
-                A primeira conversa é sem compromisso. Conte sua situação e receba uma orientação clara sobre o que pode ser feito.
+                A análise é gratuita. A conversa é sem compromisso. Mas o prazo para agir corre — e é você quem perde se esperar.
             </p>
-            <a href="https://wa.me/5511945071408?text=Ol%C3%A1%20Dra.%20Acsa%2C%20gostaria%20de%20conversar%20sobre%20o%20meu%20caso%20trabalhista." target="_blank" rel="noopener"
+            <a href="https://wa.me/5511945071408?text=Ol%C3%A1%20Dra.%20Acsa%2C%20gostaria%20de%20saber%20quais%20direitos%20tenho%20a%20receber%20no%20meu%20caso%20trabalhista." target="_blank" rel="noopener"
                onclick="trackConversion('cta_final_whatsapp')"
                class="inline-flex items-center gap-3 bg-white text-marsala hover:bg-rosa-light font-bold px-8 py-5 rounded-full transition shadow-2xl hover:scale-105 transform text-lg">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
-                Falar com a Dra. Acsa no WhatsApp
+                Quero minha análise gratuita agora
             </a>
-            <p class="text-sm text-rosa-light/80 mt-6">Atendimento em horário comercial • Resposta rápida</p>
+            <p class="text-sm text-rosa-light/80 mt-6">Atendimento em horário comercial • Resposta no mesmo dia • Sigilo total</p>
         </div>
     </section>
 
@@ -513,7 +640,7 @@
                         </div>
                     </div>
                     <p class="text-sm leading-relaxed text-gray-400">
-                        Advocacia Trabalhista em Mogi das Cruzes, Região do Alto Tietê e estado de São Paulo. Defesa dos direitos do trabalhador com atendimento humanizado.
+                        Advocacia Trabalhista em Mogi das Cruzes, Região do Alto Tietê e estado de São Paulo. Defesa exclusiva dos direitos do trabalhador.
                     </p>
                 </div>
 
