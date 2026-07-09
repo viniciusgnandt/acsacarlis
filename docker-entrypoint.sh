@@ -6,15 +6,6 @@
 set -e
 
 HTML_DIR="/usr/share/nginx/html"
-INDEX_FILE="$HTML_DIR/index.html"
-
-# Cria backup imutável do HTML original na primeira execução
-if [ ! -f "$INDEX_FILE.original" ]; then
-    cp "$INDEX_FILE" "$INDEX_FILE.original"
-fi
-
-# Sempre parte do original para permitir trocar variáveis sem rebuild
-cp "$INDEX_FILE.original" "$INDEX_FILE"
 
 # Defaults seguros caso variáveis não estejam definidas
 GADS_ENABLED="${GADS_ENABLED:-false}"
@@ -53,13 +44,24 @@ SITE_URL_ESC=$(escape_sed "$SITE_URL")
 GADS_ID_ESC=$(escape_sed "$GADS_ID")
 GADS_LABEL_ESC=$(escape_sed "$GADS_LABEL")
 
-sed -i \
-    -e "s|__GADS_SNIPPET__|${GADS_SNIPPET_ESC}|g" \
-    -e "s|__GTM_SNIPPET__|${GTM_SNIPPET_ESC}|g" \
-    -e "s|__SITE_URL__|${SITE_URL_ESC}|g" \
-    -e "s|__GADS_ID__|${GADS_ID_ESC}|g" \
-    -e "s|__GADS_LABEL__|${GADS_LABEL_ESC}|g" \
-    "$INDEX_FILE"
+# Processa todas as páginas HTML do site (index + blog), não só a home
+find "$HTML_DIR" -name "*.html" -type f | while read -r HTML_FILE; do
+    # Cria backup imutável do HTML original na primeira execução
+    if [ ! -f "$HTML_FILE.original" ]; then
+        cp "$HTML_FILE" "$HTML_FILE.original"
+    fi
+
+    # Sempre parte do original para permitir trocar variáveis sem rebuild
+    cp "$HTML_FILE.original" "$HTML_FILE"
+
+    sed -i \
+        -e "s|__GADS_SNIPPET__|${GADS_SNIPPET_ESC}|g" \
+        -e "s|__GTM_SNIPPET__|${GTM_SNIPPET_ESC}|g" \
+        -e "s|__SITE_URL__|${SITE_URL_ESC}|g" \
+        -e "s|__GADS_ID__|${GADS_ID_ESC}|g" \
+        -e "s|__GADS_LABEL__|${GADS_LABEL_ESC}|g" \
+        "$HTML_FILE"
+done
 
 echo "[entrypoint] Configuração aplicada. Iniciando nginx..."
 
