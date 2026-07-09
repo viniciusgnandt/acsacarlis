@@ -94,7 +94,9 @@
                 <a href="/#situacoes" class="hover:text-marsala transition">Situações</a>
                 <a href="/#como-funciona" class="hover:text-marsala transition">Como funciona</a>
                 <a href="/#sobre" class="hover:text-marsala transition">Sobre</a>
+                <a href="/#faq" class="hover:text-marsala transition">Dúvidas</a>
                 <a href="/blog/" class="text-marsala font-semibold">Blog</a>
+                <a href="/calculadora-trabalhista.html" class="hover:text-marsala transition">Calculadora</a>
             </nav>
             <a href="https://wa.me/5511945071408?text=Ol%C3%A1%20Dra.%20Acsa%2C%20vi%20o%20seu%20site%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida%20sobre%20uma%20quest%C3%A3o%20trabalhista." target="_blank" rel="noopener"
                onclick="trackConversion('blog_justa_causa_header_whatsapp')"
@@ -102,7 +104,26 @@
                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
                 WhatsApp
             </a>
+
+            <!-- Botão hambúrguer (mobile) -->
+            <button id="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu"
+                    class="md:hidden inline-flex items-center justify-center w-11 h-11 -mr-2 rounded-lg text-marsala-dark hover:bg-rosa-soft transition">
+                <svg id="menu-icon-open" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                <svg id="menu-icon-close" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
         </div>
+
+        <!-- Menu mobile -->
+        <nav id="mobile-menu" class="md:hidden hidden border-t border-rosa-light bg-white">
+            <div class="max-w-6xl mx-auto px-4 py-2 flex flex-col">
+                <a href="/#situacoes" class="py-3 px-2 text-gray-700 font-medium border-b border-gray-100 hover:text-marsala transition" data-menu-link>Situações</a>
+                <a href="/#como-funciona" class="py-3 px-2 text-gray-700 font-medium border-b border-gray-100 hover:text-marsala transition" data-menu-link>Como funciona</a>
+                <a href="/#sobre" class="py-3 px-2 text-gray-700 font-medium border-b border-gray-100 hover:text-marsala transition" data-menu-link>Sobre</a>
+                <a href="/#faq" class="py-3 px-2 text-gray-700 font-medium border-b border-gray-100 hover:text-marsala transition" data-menu-link>Dúvidas</a>
+                <a href="/blog/" class="py-3 px-2 text-gray-700 font-medium border-b border-gray-100 hover:text-marsala transition" data-menu-link>Blog</a>
+                <a href="/calculadora-trabalhista.html" class="py-3 px-2 text-gray-700 font-medium hover:text-marsala transition" data-menu-link>Calculadora</a>
+            </div>
+        </nav>
     </header>
 
     <div class="max-w-3xl mx-auto px-4 pt-6 text-sm text-gray-500">
@@ -116,7 +137,10 @@
     <article class="max-w-3xl mx-auto px-4 py-8 md:py-12">
         <p class="text-xs uppercase tracking-wider text-marsala font-semibold mb-3">Rescisão</p>
         <h1 class="font-serif text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">Fui demitido por justa causa: entenda seus direitos</h1>
-        <p class="text-gray-500 text-sm mb-8">Por Dra. Acsa Carlis, OAB/SP 436.184 — Advogada Trabalhista &middot; Publicado em 9 de julho de 2026</p>
+        <div class="flex items-center gap-3 mb-8">
+            <img src="/assets/img/acsa-carlis.jpg" alt="Dra. Acsa Carlis" class="w-11 h-11 rounded-full object-cover object-top ring-2 ring-rosa-light" width="44" height="44">
+            <p class="text-gray-500 text-sm">Por Dra. Acsa Carlis, OAB/SP 436.184 — Advogada Trabalhista &middot; Publicado em 9 de julho de 2026</p>
+        </div>
 
         <div class="prose-custom text-gray-700 leading-relaxed space-y-6 text-base md:text-lg">
 
@@ -183,6 +207,24 @@
             </a>
         </div>
 
+        <div class="mt-12">
+            <h3 class="font-serif text-xl font-bold text-gray-900 mb-4">Leia também</h3>
+            <div class="grid sm:grid-cols-3 gap-4">
+                <a href="/blog/advertencia-no-trabalho.html" class="block bg-white border border-gray-100 rounded-xl p-4 hover:shadow-md transition">
+                    <p class="text-xs uppercase tracking-wider text-marsala font-semibold mb-1">Rescisão</p>
+                    <p class="font-serif font-semibold text-gray-900 text-sm leading-snug">Advertência no trabalho: quando é válida e quantas até a justa causa?</p>
+                </a>
+                <a href="/blog/calculo-rescisao-trabalhista.html" class="block bg-white border border-gray-100 rounded-xl p-4 hover:shadow-md transition">
+                    <p class="text-xs uppercase tracking-wider text-marsala font-semibold mb-1">Rescisão</p>
+                    <p class="font-serif font-semibold text-gray-900 text-sm leading-snug">Como calcular a rescisão trabalhista: guia completo</p>
+                </a>
+                <a href="/blog/demissao-indireta.html" class="block bg-white border border-gray-100 rounded-xl p-4 hover:shadow-md transition">
+                    <p class="text-xs uppercase tracking-wider text-marsala font-semibold mb-1">Rescisão</p>
+                    <p class="font-serif font-semibold text-gray-900 text-sm leading-snug">Demissão indireta: o que é e quando você tem direito?</p>
+                </a>
+            </div>
+        </div>
+
         <div class="mt-10 text-center">
             <a href="/blog/" class="text-marsala font-semibold hover:underline">← Voltar para o blog</a>
         </div>
@@ -231,6 +273,10 @@
                         <li class="flex items-start gap-2">
                             <svg class="w-5 h-5 text-marsala-light flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
                             <span>Mogi das Cruzes - SP</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg class="w-5 h-5 text-marsala-light flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.196-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
+                            <a href="https://g.page/r/CRvTkRdieQELEBM/review" target="_blank" rel="noopener" class="hover:text-white transition">Avalie-nos no Google</a>
                         </li>
                     </ul>
                 </div>
