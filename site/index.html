@@ -34,31 +34,7 @@
     <link rel="apple-touch-icon" href="/assets/img/favicon.png">
 
     <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        marsala: {
-                            DEFAULT: '#800020',
-                            light: '#a13447',
-                            dark: '#5e0017',
-                        },
-                        rosa: {
-                            light: '#fce4ec',
-                            DEFAULT: '#f8bbd0',
-                            soft: '#fff5f7',
-                        }
-                    },
-                    fontFamily: {
-                        serif: ['Playfair Display', 'Georgia', 'serif'],
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
+        <link rel="stylesheet" href="/assets/tailwind.css">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -124,7 +100,7 @@
             <nav class="hidden md:flex gap-6 text-sm font-medium text-gray-700">
                 <a href="#situacoes" class="hover:text-marsala transition">Situações</a>
                 <a href="#como-funciona" class="hover:text-marsala transition">Como funciona</a>
-                <a href="#sobre" class="hover:text-marsala transition">Sobre</a>
+                <a href="/sobre.html" class="hover:text-marsala transition">Sobre</a>
                 <a href="#faq" class="hover:text-marsala transition">Dúvidas</a>
                 <a href="/blog/" class="hover:text-marsala transition">Blog</a>
                 <a href="/calculadora-trabalhista.html" class="hover:text-marsala transition">Calculadora</a>
@@ -149,7 +125,7 @@
             <div class="max-w-6xl mx-auto px-4 py-2 flex flex-col">
                 <a href="#situacoes" class="py-3 px-2 text-gray-700 font-medium border-b border-gray-100 hover:text-marsala transition" data-menu-link>Situações</a>
                 <a href="#como-funciona" class="py-3 px-2 text-gray-700 font-medium border-b border-gray-100 hover:text-marsala transition" data-menu-link>Como funciona</a>
-                <a href="#sobre" class="py-3 px-2 text-gray-700 font-medium border-b border-gray-100 hover:text-marsala transition" data-menu-link>Sobre</a>
+                <a href="/sobre.html" class="py-3 px-2 text-gray-700 font-medium border-b border-gray-100 hover:text-marsala transition" data-menu-link>Sobre</a>
                 <a href="#faq" class="py-3 px-2 text-gray-700 font-medium border-b border-gray-100 hover:text-marsala transition" data-menu-link>Dúvidas</a>
                 <a href="/blog/" class="py-3 px-2 text-gray-700 font-medium border-b border-gray-100 hover:text-marsala transition" data-menu-link>Blog</a>
                 <a href="/calculadora-trabalhista.html" class="py-3 px-2 text-gray-700 font-medium hover:text-marsala transition" data-menu-link>Calculadora</a>
@@ -741,11 +717,13 @@
       "@context": "https://schema.org",
       "@type": "FAQPage",
       "mainEntity": [
-        {"@type":"Question","name":"Como são definidos os honorários advocatícios?","acceptedAnswer":{"@type":"Answer","text":"Os honorários seguem os parâmetros da Tabela da OAB/SP e do Código de Ética e Disciplina da OAB, com condições definidas de forma individualizada no atendimento."}},
-        {"@type":"Question","name":"Quanto tempo demora um processo trabalhista?","acceptedAnswer":{"@type":"Answer","text":"O tempo varia conforme a complexidade do caso e a Vara do Trabalho. Em média, processos podem durar entre 1 e 3 anos. Acordos podem ser firmados a qualquer momento."}},
-        {"@type":"Question","name":"Tenho até quando para entrar com uma ação trabalhista?","acceptedAnswer":{"@type":"Answer","text":"O prazo (prescrição) é de 2 anos após o fim do contrato de trabalho. Dentro desse período, é possível cobrar direitos dos últimos 5 anos trabalhados."}},
-        {"@type":"Question","name":"Posso processar a empresa enquanto ainda trabalho lá?","acceptedAnswer":{"@type":"Answer","text":"Sim, é seu direito. A lei proíbe demissão por retaliação a quem busca a Justiça do Trabalho."}},
-        {"@type":"Question","name":"O que é rescisão indireta?","acceptedAnswer":{"@type":"Answer","text":"É a justa causa do empregador. Quando a empresa descumpre obrigações graves, o trabalhador pode pedir o reconhecimento da rescisão indireta e receber todos os direitos."}}
+        {"@type":"Question","name":"Como são definidos os honorários?","acceptedAnswer":{"@type":"Answer","text":"Os honorários seguem os parâmetros da Tabela da OAB/SP e do Código de Ética e Disciplina da OAB. As condições são definidas de forma individualizada, diretamente com o cliente, no atendimento."}},
+        {"@type":"Question","name":"Qual é o prazo para ingressar com uma ação trabalhista?","acceptedAnswer":{"@type":"Answer","text":"Em regra, a prescrição é de 2 anos após o fim do contrato de trabalho, alcançando direitos dos últimos 5 anos trabalhados. Trata-se de informação geral; a contagem do prazo em cada caso deve ser avaliada individualmente com um advogado."}},
+        {"@type":"Question","name":"Posso processar a empresa enquanto ainda trabalho lá?","acceptedAnswer":{"@type":"Answer","text":"Sim, é seu direito. A lei proíbe demissão por retaliação a quem busca a Justiça do Trabalho. Avaliamos cada caso para escolher o momento mais estratégico de agir, sempre protegendo seu emprego e seus direitos."}},
+        {"@type":"Question","name":"Quanto tempo demora um processo trabalhista?","acceptedAnswer":{"@type":"Answer","text":"Varia conforme o caso. Acordos extrajudiciais podem ser resolvidos em semanas. Processos na Justiça do Trabalho levam, em média, 1 a 3 anos. Sempre avaliamos qual caminho traz o melhor resultado no menor tempo para o seu caso específico."}},
+        {"@type":"Question","name":"Quais documentos preciso ter?","acceptedAnswer":{"@type":"Answer","text":"O ideal é ter CTPS, holerites, contrato de trabalho, termo de rescisão (TRCT) e extrato do FGTS. Mas não se preocupe se faltar algo — orientamos como obter cada documento e avaliamos o caso mesmo com documentação incompleta."}},
+        {"@type":"Question","name":"O que é rescisão indireta e quando posso pedir?","acceptedAnswer":{"@type":"Answer","text":"É a \"justa causa do empregador\". Quando a empresa descumpre obrigações graves — atraso de salários, ausência de FGTS, assédio, exigências abusivas — o trabalhador pode pedir o reconhecimento da rescisão indireta e receber todos os direitos como se fosse demitido sem justa causa."}},
+        {"@type":"Question","name":"Vocês atendem fora de Mogi das Cruzes?","acceptedAnswer":{"@type":"Answer","text":"Sim! Atendo em Mogi das Cruzes, Suzano, Itaquaquecetuba, Poá, Ferraz de Vasconcelos, Arujá, Guararema e em toda a Região Metropolitana de São Paulo. Também realizo atendimentos online por videochamada para clientes em todo o estado."}}
       ]
     }
     </script>

@@ -1,0 +1,13 @@
+{
+  "name": "acsa-carlis-site",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Build assets for acsacarlis.adv.br",
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/tailwind-input.css -o ./site/assets/tailwind.css --minify",
+    "watch:css": "tailwindcss -i ./src/tailwind-input.css -o ./site/assets/tailwind.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.13"
+  }
+}

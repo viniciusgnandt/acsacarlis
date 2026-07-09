@@ -18,6 +18,7 @@ desktop.ini
 *.log
 npm-debug.log*
 
-# Build artifacts (caso adicionemos build no futuro)
+# Build artifacts
 node_modules/
 dist/
+site/assets/tailwind.css

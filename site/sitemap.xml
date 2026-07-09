@@ -12,14 +12,15 @@
         <priority>0.9</priority>
     </url>
     <url>
+        <loc>https://www.acsacarlis.adv.br/sobre.html</loc>
+        <lastmod>2026-07-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://www.acsacarlis.adv.br/#servicos</loc>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>https://www.acsacarlis.adv.br/#sobre</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
     </url>
     <url>
         <loc>https://www.acsacarlis.adv.br/#faq</loc>
