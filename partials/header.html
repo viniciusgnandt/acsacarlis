@@ -1,0 +1,44 @@
+    <header class="bg-white shadow-sm sticky top-0 z-40">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="{{LOGO_HREF}}" class="flex items-center gap-3">
+                <img src="/assets/img/logo.png" alt="Acsa Carlis - Advogada Trabalhista OAB/SP 436.184" class="h-14 md:h-16 w-auto" width="160" height="64">
+                <div class="block">
+                    <p class="font-serif font-bold text-marsala leading-tight text-base md:text-lg">Acsa Carlis</p>
+                    <p class="text-[10px] md:text-xs text-gray-500 leading-tight uppercase tracking-wider">OAB/SP 436.184</p>
+                </div>
+            </a>
+            <nav class="hidden md:flex gap-6 text-sm font-medium text-gray-700">
+                <a href="{{HOME}}#situacoes" class="{{NAV_SITUACOES_D}}">Situações</a>
+                <a href="{{HOME}}#como-funciona" class="{{NAV_COMO_FUNCIONA_D}}">Como funciona</a>
+                <a href="{{HOME}}#faq" class="{{NAV_DUVIDAS_D}}">Dúvidas</a>
+                <a href="/sobre.html" class="{{NAV_SOBRE_D}}">Sobre</a>
+                <a href="/blog/" class="{{NAV_BLOG_D}}">Blog</a>
+                <a href="/calculadora-trabalhista.html" class="{{NAV_CALCULADORA_D}}">Calculadora</a>
+            </nav>
+            <a href="https://wa.me/5511945071408?text=Ol%C3%A1%20Dra.%20Acsa%2C%20vi%20o%20seu%20site%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida%20sobre%20uma%20quest%C3%A3o%20trabalhista." target="_blank" rel="noopener"
+               onclick="trackConversion('{{PREFIX}}header_whatsapp')"
+               class="hidden md:inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white text-sm font-semibold px-4 py-2 rounded-full transition shadow-sm">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                {{HEADER_WA_LABEL}}
+            </a>
+
+            <!-- Botão hambúrguer (mobile) -->
+            <button id="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu"
+                    class="md:hidden inline-flex items-center justify-center w-11 h-11 -mr-2 rounded-lg text-marsala-dark hover:bg-rosa-soft transition">
+                <svg id="menu-icon-open" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                <svg id="menu-icon-close" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+        </div>
+
+        <!-- Menu mobile -->
+        <nav id="mobile-menu" class="md:hidden hidden border-t border-rosa-light bg-white">
+            <div class="max-w-6xl mx-auto px-4 py-2 flex flex-col">
+                <a href="{{HOME}}#situacoes" class="{{NAV_SITUACOES_M}}" data-menu-link>Situações</a>
+                <a href="{{HOME}}#como-funciona" class="{{NAV_COMO_FUNCIONA_M}}" data-menu-link>Como funciona</a>
+                <a href="{{HOME}}#faq" class="{{NAV_DUVIDAS_M}}" data-menu-link>Dúvidas</a>
+                <a href="/sobre.html" class="{{NAV_SOBRE_M}}" data-menu-link>Sobre</a>
+                <a href="/blog/" class="{{NAV_BLOG_M}}" data-menu-link>Blog</a>
+                <a href="/calculadora-trabalhista.html" class="{{NAV_CALCULADORA_M}}" data-menu-link>Calculadora</a>
+            </div>
+        </nav>
+    </header>

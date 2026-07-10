@@ -65,7 +65,7 @@
 </head>
 <body class="font-sans text-gray-800 bg-white antialiased">
 
-    <header class="bg-white shadow-sm sticky top-0 z-40">
+        <header class="bg-white shadow-sm sticky top-0 z-40">
         <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
             <a href="/" class="flex items-center gap-3">
                 <img src="/assets/img/logo.png" alt="Acsa Carlis - Advogada Trabalhista OAB/SP 436.184" class="h-14 md:h-16 w-auto" width="160" height="64">
@@ -77,8 +77,8 @@
             <nav class="hidden md:flex gap-6 text-sm font-medium text-gray-700">
                 <a href="/#situacoes" class="hover:text-marsala transition">Situações</a>
                 <a href="/#como-funciona" class="hover:text-marsala transition">Como funciona</a>
-                <a href="/sobre.html" class="hover:text-marsala transition">Sobre</a>
                 <a href="/#faq" class="hover:text-marsala transition">Dúvidas</a>
+                <a href="/sobre.html" class="hover:text-marsala transition">Sobre</a>
                 <a href="/blog/" class="text-marsala font-semibold">Blog</a>
                 <a href="/calculadora-trabalhista.html" class="hover:text-marsala transition">Calculadora</a>
             </nav>
@@ -102,9 +102,9 @@
             <div class="max-w-6xl mx-auto px-4 py-2 flex flex-col">
                 <a href="/#situacoes" class="py-3 px-2 text-gray-700 font-medium border-b border-gray-100 hover:text-marsala transition" data-menu-link>Situações</a>
                 <a href="/#como-funciona" class="py-3 px-2 text-gray-700 font-medium border-b border-gray-100 hover:text-marsala transition" data-menu-link>Como funciona</a>
-                <a href="/sobre.html" class="py-3 px-2 text-gray-700 font-medium border-b border-gray-100 hover:text-marsala transition" data-menu-link>Sobre</a>
                 <a href="/#faq" class="py-3 px-2 text-gray-700 font-medium border-b border-gray-100 hover:text-marsala transition" data-menu-link>Dúvidas</a>
-                <a href="/blog/" class="py-3 px-2 text-gray-700 font-medium border-b border-gray-100 hover:text-marsala transition" data-menu-link>Blog</a>
+                <a href="/sobre.html" class="py-3 px-2 text-gray-700 font-medium border-b border-gray-100 hover:text-marsala transition" data-menu-link>Sobre</a>
+                <a href="/blog/" class="py-3 px-2 text-marsala font-semibold" data-menu-link>Blog</a>
                 <a href="/calculadora-trabalhista.html" class="py-3 px-2 text-gray-700 font-medium hover:text-marsala transition" data-menu-link>Calculadora</a>
             </div>
         </nav>
@@ -123,7 +123,7 @@
         <h1 class="font-serif text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">FGTS: o que é, como funciona o saque e a multa de 40%?</h1>
         <div class="flex items-center gap-3 mb-8">
             <img src="/assets/img/acsa-carlis.jpg" alt="Dra. Acsa Carlis" class="w-11 h-11 rounded-full object-cover object-top ring-2 ring-rosa-light" width="44" height="44">
-            <p class="text-gray-500 text-sm">Por Dra. Acsa Carlis, OAB/SP 436.184 — Advogada Trabalhista &middot; Publicado em 9 de julho de 2026</p>
+            <p class="text-gray-500 text-sm">Por Dra. Acsa Carlis, OAB/SP 436.184 — Advogada Trabalhista</p>
         </div>
 
         <div class="prose-custom text-gray-700 leading-relaxed space-y-6 text-base md:text-lg">
@@ -208,6 +208,7 @@
         </div>
     </article>
 
+        <!-- FOOTER -->
     <footer class="bg-gray-900 text-gray-300 py-12">
         <div class="max-w-6xl mx-auto px-4">
             <div class="grid md:grid-cols-3 gap-8 mb-8">
@@ -274,6 +275,7 @@
         </div>
     </footer>
 
+    <!-- Barra fixa de WhatsApp (mobile) -->
     <div class="fixed bottom-0 inset-x-0 z-50 md:hidden bg-white/95 backdrop-blur border-t border-gray-200 px-4 py-3" style="padding-bottom: calc(0.75rem + env(safe-area-inset-bottom));">
         <a href="https://wa.me/5511945071408?text=Ol%C3%A1%20Dra.%20Acsa%2C%20vi%20o%20seu%20site%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida%20sobre%20uma%20quest%C3%A3o%20trabalhista." target="_blank" rel="noopener"
            onclick="trackConversion('blog_fgts_mobile_bar_whatsapp')"
@@ -283,6 +285,7 @@
         </a>
     </div>
 
+    <!-- WhatsApp Botão Flutuante (desktop) -->
     <a href="https://wa.me/5511945071408?text=Ol%C3%A1%20Dra.%20Acsa%2C%20vi%20o%20seu%20site%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida%20sobre%20uma%20quest%C3%A3o%20trabalhista." target="_blank" rel="noopener"
        onclick="trackConversion('blog_fgts_floating_whatsapp')"
        aria-label="Falar no WhatsApp"
@@ -291,13 +294,13 @@
         <span class="hidden md:inline font-semibold pr-2">Fale conosco</span>
     </a>
 
-    <div hidden>
-        <!-- Google Tag Manager -->
+        <div hidden>
+        <!-- Tags injetadas pelo entrypoint via .env (placeholders ficam ocultos ao abrir o arquivo local) -->
         __GTM_SNIPPET__
-        <!-- Google Ads -->
         __GADS_SNIPPET__
     </div>
 
+    <!-- Define send_to antes do script.js -->
     <script>window.__GADS_SEND_TO__='__GADS_ID__/__GADS_LABEL__';</script>
 
     <script src="/assets/script.js"></script>

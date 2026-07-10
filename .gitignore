@@ -13,6 +13,7 @@ desktop.ini
 .idea/
 *.swp
 *.swo
+.claude/
 
 # Logs
 *.log
@@ -22,3 +23,10 @@ npm-debug.log*
 node_modules/
 dist/
 site/assets/tailwind.css
+
+# HTML pages generated from src/pages/ + partials/ via scripts/build-html.js
+# (empresas.html is hand-maintained and NOT generated, so it stays tracked)
+site/index.html
+site/sobre.html
+site/calculadora-trabalhista.html
+site/blog/*.html

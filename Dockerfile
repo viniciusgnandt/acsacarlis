@@ -6,9 +6,11 @@ COPY package.json package-lock.json* ./
 RUN npm install --no-fund --no-audit
 
 COPY tailwind.config.js ./
+COPY partials/ ./partials/
+COPY scripts/ ./scripts/
 COPY src/ ./src/
 COPY site/ ./site/
-RUN npm run build:css
+RUN npm run build
 
 FROM nginx:1.27-alpine
 

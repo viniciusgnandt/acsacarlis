@@ -1,0 +1,10 @@
+    <div hidden>
+        <!-- Tags injetadas pelo entrypoint via .env (placeholders ficam ocultos ao abrir o arquivo local) -->
+        __GTM_SNIPPET__
+        __GADS_SNIPPET__
+    </div>
+
+    <!-- Define send_to antes do script.js -->
+    <script>window.__GADS_SEND_TO__='__GADS_ID__/__GADS_LABEL__';</script>
+
+    <script src="/assets/script.js"></script>

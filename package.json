@@ -4,7 +4,9 @@
   "version": "1.0.0",
   "description": "Build assets for acsacarlis.adv.br",
   "scripts": {
+    "build:html": "node scripts/build-html.js",
     "build:css": "tailwindcss -i ./src/tailwind-input.css -o ./site/assets/tailwind.css --minify",
+    "build": "npm run build:html && npm run build:css",
     "watch:css": "tailwindcss -i ./src/tailwind-input.css -o ./site/assets/tailwind.css --watch"
   },
   "devDependencies": {
