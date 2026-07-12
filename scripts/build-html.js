@@ -19,6 +19,10 @@ const NAV_SETS = {
     ['servicos', 'SERVICOS'], ['como-funciona', 'COMO_FUNCIONA'], ['duvidas', 'DUVIDAS'],
     ['sobre', 'SOBRE'], ['blog', 'BLOG'], ['calculadora', 'CALCULADORA'],
   ],
+  area: [
+    ['servicos', 'SERVICOS'], ['como-funciona', 'COMO_FUNCIONA'], ['duvidas', 'DUVIDAS'],
+    ['sobre', 'SOBRE'], ['blog', 'BLOG'],
+  ],
 };
 
 const DISCLAIMERS = {
@@ -40,9 +44,8 @@ const DISCLAIMERS = {
                 </p>`,
 };
 
-function navClass(item, active, isMobile) {
+function navClass(item, active, isMobile, isLast) {
   const isActive = item === active;
-  const isLast = item === 'calculadora';
   if (!isMobile) {
     return isActive ? 'text-marsala font-semibold' : 'hover:text-marsala transition';
   }
@@ -60,10 +63,12 @@ function parseAttrs(str) {
   return attrs;
 }
 
+const HEADER_FILES = { default: 'header.html', empresas: 'header-empresas.html', area: 'header-area.html' };
+const FOOTER_FILES = { default: 'footer.html', empresas: 'footer-empresas.html', area: 'footer-area.html' };
+
 function renderHeader(attrs) {
-  const variant = attrs.variant === 'empresas' ? 'empresas' : 'default';
-  const file = variant === 'empresas' ? 'header-empresas.html' : 'header.html';
-  let tpl = fs.readFileSync(path.join(PARTIALS_DIR, file), 'utf8');
+  const variant = HEADER_FILES[attrs.variant] ? attrs.variant : 'default';
+  let tpl = fs.readFileSync(path.join(PARTIALS_DIR, HEADER_FILES[variant]), 'utf8');
   const home = attrs.home || '';
   const prefix = attrs.prefix || '';
   const active = attrs.active || '';
@@ -75,21 +80,33 @@ function renderHeader(attrs) {
   tpl = tpl.split('{{LOGO_HREF}}').join(logoHref);
   tpl = tpl.split('{{HEADER_WA_LABEL}}').join(waLabel);
 
-  for (const [item, key] of NAV_SETS[variant]) {
-    tpl = tpl.split(`{{NAV_${key}_D}}`).join(navClass(item, active, false));
-    tpl = tpl.split(`{{NAV_${key}_M}}`).join(navClass(item, active, true));
+  if (variant === 'area') {
+    tpl = tpl.split('{{AREA_SLUG}}').join(attrs.areaSlug || '');
+    tpl = tpl.split('{{AREA_LABEL}}').join(attrs.areaLabel || '');
+    tpl = tpl.split('{{WA_TEXT}}').join(attrs.waText || '');
   }
+
+  const navSet = NAV_SETS[variant];
+  navSet.forEach(([item, key], idx) => {
+    const isLast = idx === navSet.length - 1;
+    tpl = tpl.split(`{{NAV_${key}_D}}`).join(navClass(item, active, false, isLast));
+    tpl = tpl.split(`{{NAV_${key}_M}}`).join(navClass(item, active, true, isLast));
+  });
   return tpl;
 }
 
 function renderFooter(attrs) {
-  const variant = attrs.variant === 'empresas' ? 'empresas' : 'default';
-  const file = variant === 'empresas' ? 'footer-empresas.html' : 'footer.html';
-  let tpl = fs.readFileSync(path.join(PARTIALS_DIR, file), 'utf8');
+  const variant = FOOTER_FILES[attrs.variant] ? attrs.variant : 'default';
+  let tpl = fs.readFileSync(path.join(PARTIALS_DIR, FOOTER_FILES[variant]), 'utf8');
   const prefix = attrs.prefix || '';
   const disclaimerKey = attrs.disclaimer || 'default';
   tpl = tpl.split('{{PREFIX}}').join(prefix);
   tpl = tpl.replace('{{FOOTER_DISCLAIMER}}', DISCLAIMERS[disclaimerKey] || DISCLAIMERS.default);
+
+  if (variant === 'area') {
+    tpl = tpl.split('{{WA_TEXT}}').join(attrs.waText || '');
+    tpl = tpl.split('{{FOOTER_TAGLINE}}').join(attrs.footerTagline || '');
+  }
   return tpl;
 }
 
