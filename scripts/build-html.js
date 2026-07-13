@@ -23,6 +23,9 @@ const NAV_SETS = {
     ['servicos', 'SERVICOS'], ['como-funciona', 'COMO_FUNCIONA'], ['duvidas', 'DUVIDAS'],
     ['sobre', 'SOBRE'], ['blog', 'BLOG'],
   ],
+  hub: [
+    ['areas', 'AREAS'], ['sobre', 'SOBRE'], ['duvidas', 'DUVIDAS'],
+  ],
 };
 
 const DISCLAIMERS = {
@@ -63,8 +66,8 @@ function parseAttrs(str) {
   return attrs;
 }
 
-const HEADER_FILES = { default: 'header.html', empresas: 'header-empresas.html', area: 'header-area.html' };
-const FOOTER_FILES = { default: 'footer.html', empresas: 'footer-empresas.html', area: 'footer-area.html' };
+const HEADER_FILES = { default: 'header.html', empresas: 'header-empresas.html', area: 'header-area.html', hub: 'header-hub.html' };
+const FOOTER_FILES = { default: 'footer.html', empresas: 'footer-empresas.html', area: 'footer-area.html', hub: 'footer-hub.html' };
 
 function renderHeader(attrs) {
   const variant = HEADER_FILES[attrs.variant] ? attrs.variant : 'default';
@@ -75,10 +78,13 @@ function renderHeader(attrs) {
   const logoHref = attrs.logoHref || '/';
   const waLabel = attrs.waLabel || 'WhatsApp';
 
+  const subLabel = attrs.subLabel ? ' • ' + attrs.subLabel : '';
+
   tpl = tpl.split('{{HOME}}').join(home);
   tpl = tpl.split('{{PREFIX}}').join(prefix);
   tpl = tpl.split('{{LOGO_HREF}}').join(logoHref);
   tpl = tpl.split('{{HEADER_WA_LABEL}}').join(waLabel);
+  tpl = tpl.split('{{HEADER_SUBLABEL}}').join(subLabel);
 
   if (variant === 'area') {
     tpl = tpl.split('{{AREA_SLUG}}').join(attrs.areaSlug || '');
