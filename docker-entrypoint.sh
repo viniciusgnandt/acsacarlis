@@ -12,7 +12,7 @@ GADS_ENABLED="${GADS_ENABLED:-false}"
 GADS_ID="${GADS_ID:-}"
 GADS_LABEL="${GADS_LABEL:-}"
 GTM_ID="${GTM_ID:-}"
-SITE_URL="${SITE_URL:-https://www.acsacarlis.adv.br}"
+SITE_URL="${SITE_URL:-https://acsacarlis.adv.br}"
 
 # Monta bloco do Google Ads se habilitado e com ID válido
 if [ "$GADS_ENABLED" = "true" ] && [ -n "$GADS_ID" ] && [ "$GADS_ID" != "AW-XXXXXXXXXX" ]; then

@@ -1,543 +1,533 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://www.acsacarlis.adv.br/</loc>
+        <loc>https://acsacarlis.adv.br/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/calculadora-trabalhista.html</loc>
+        <loc>https://acsacarlis.adv.br/calculadora-trabalhista.html</loc>
         <lastmod>2026-07-09</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/sobre.html</loc>
+        <loc>https://acsacarlis.adv.br/sobre.html</loc>
         <lastmod>2026-07-09</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/empresas.html</loc>
+        <loc>https://acsacarlis.adv.br/empresas.html</loc>
         <lastmod>2026-07-10</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/#servicos</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>https://www.acsacarlis.adv.br/#faq</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.acsacarlis.adv.br/blog/</loc>
+        <loc>https://acsacarlis.adv.br/blog/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/blog/calculo-rescisao-trabalhista.html</loc>
+        <loc>https://acsacarlis.adv.br/blog/calculo-rescisao-trabalhista.html</loc>
         <lastmod>2026-07-09</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/blog/demissao-indireta.html</loc>
+        <loc>https://acsacarlis.adv.br/blog/demissao-indireta.html</loc>
         <lastmod>2026-07-09</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/blog/trabalho-sem-carteira-assinada.html</loc>
+        <loc>https://acsacarlis.adv.br/blog/trabalho-sem-carteira-assinada.html</loc>
         <lastmod>2026-07-09</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/blog/seguro-desemprego.html</loc>
+        <loc>https://acsacarlis.adv.br/blog/seguro-desemprego.html</loc>
         <lastmod>2026-07-09</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/blog/assedio-moral-no-trabalho.html</loc>
+        <loc>https://acsacarlis.adv.br/blog/assedio-moral-no-trabalho.html</loc>
         <lastmod>2026-07-09</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/blog/demissao-justa-causa.html</loc>
+        <loc>https://acsacarlis.adv.br/blog/demissao-justa-causa.html</loc>
         <lastmod>2026-07-09</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/blog/pedido-de-demissao-direitos.html</loc>
+        <loc>https://acsacarlis.adv.br/blog/pedido-de-demissao-direitos.html</loc>
         <lastmod>2026-07-09</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/blog/advertencia-no-trabalho.html</loc>
+        <loc>https://acsacarlis.adv.br/blog/advertencia-no-trabalho.html</loc>
         <lastmod>2026-07-09</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/blog/horas-extras-como-funciona.html</loc>
+        <loc>https://acsacarlis.adv.br/blog/horas-extras-como-funciona.html</loc>
         <lastmod>2026-07-09</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/blog/ferias-regras-direitos.html</loc>
+        <loc>https://acsacarlis.adv.br/blog/ferias-regras-direitos.html</loc>
         <lastmod>2026-07-09</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/blog/acidente-de-trabalho-direitos.html</loc>
+        <loc>https://acsacarlis.adv.br/blog/acidente-de-trabalho-direitos.html</loc>
         <lastmod>2026-07-09</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/blog/fgts-o-que-e-como-funciona.html</loc>
+        <loc>https://acsacarlis.adv.br/blog/fgts-o-que-e-como-funciona.html</loc>
         <lastmod>2026-07-09</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/blog/clt-guia-direitos-basicos.html</loc>
+        <loc>https://acsacarlis.adv.br/blog/clt-guia-direitos-basicos.html</loc>
         <lastmod>2026-07-09</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/blog/reforma-trabalhista-2017.html</loc>
+        <loc>https://acsacarlis.adv.br/blog/reforma-trabalhista-2017.html</loc>
         <lastmod>2026-07-09</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/blog-empresas/</loc>
+        <loc>https://acsacarlis.adv.br/blog-empresas/</loc>
         <lastmod>2026-07-10</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/blog-empresas/passivo-trabalhista-como-evitar.html</loc>
+        <loc>https://acsacarlis.adv.br/blog-empresas/passivo-trabalhista-como-evitar.html</loc>
         <lastmod>2026-07-10</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/blog-empresas/terceirizacao-riscos-trabalhistas.html</loc>
+        <loc>https://acsacarlis.adv.br/blog-empresas/terceirizacao-riscos-trabalhistas.html</loc>
         <lastmod>2026-07-10</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/blog-empresas/como-fazer-rescisao-sem-riscos.html</loc>
+        <loc>https://acsacarlis.adv.br/blog-empresas/como-fazer-rescisao-sem-riscos.html</loc>
         <lastmod>2026-07-10</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/blog-empresas/horas-extras-banco-horas-empresa.html</loc>
+        <loc>https://acsacarlis.adv.br/blog-empresas/horas-extras-banco-horas-empresa.html</loc>
         <lastmod>2026-07-10</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/blog-empresas/assedio-moral-como-empresa-deve-agir.html</loc>
+        <loc>https://acsacarlis.adv.br/blog-empresas/assedio-moral-como-empresa-deve-agir.html</loc>
         <lastmod>2026-07-10</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/blog-empresas/contrato-experiencia-o-que-empresa-precisa-saber.html</loc>
+        <loc>https://acsacarlis.adv.br/blog-empresas/contrato-experiencia-o-que-empresa-precisa-saber.html</loc>
         <lastmod>2026-07-10</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/blog-empresas/estabilidade-provisoria-cuidados-empresa.html</loc>
+        <loc>https://acsacarlis.adv.br/blog-empresas/estabilidade-provisoria-cuidados-empresa.html</loc>
         <lastmod>2026-07-10</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/blog-empresas/compliance-trabalhista-por-onde-comecar.html</loc>
+        <loc>https://acsacarlis.adv.br/blog-empresas/compliance-trabalhista-por-onde-comecar.html</loc>
         <lastmod>2026-07-10</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/civel/</loc>
+        <loc>https://acsacarlis.adv.br/civel/</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/civel/blog/</loc>
+        <loc>https://acsacarlis.adv.br/civel/blog/</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/civel/blog/acao-despejo-direitos-locador-locatario.html</loc>
+        <loc>https://acsacarlis.adv.br/civel/blog/acao-despejo-direitos-locador-locatario.html</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/civel/blog/acidente-transito-quem-paga.html</loc>
+        <loc>https://acsacarlis.adv.br/civel/blog/acidente-transito-quem-paga.html</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/civel/blog/clausulas-abusivas-em-contratos.html</loc>
+        <loc>https://acsacarlis.adv.br/civel/blog/clausulas-abusivas-em-contratos.html</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/civel/blog/cobranca-indevida-como-contestar.html</loc>
+        <loc>https://acsacarlis.adv.br/civel/blog/cobranca-indevida-como-contestar.html</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/civel/blog/como-cobrar-divida-corretamente.html</loc>
+        <loc>https://acsacarlis.adv.br/civel/blog/como-cobrar-divida-corretamente.html</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/civel/blog/conflitos-condominio-vizinhos.html</loc>
+        <loc>https://acsacarlis.adv.br/civel/blog/conflitos-condominio-vizinhos.html</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/civel/blog/danos-morais-quando-cabe-indenizacao.html</loc>
+        <loc>https://acsacarlis.adv.br/civel/blog/danos-morais-quando-cabe-indenizacao.html</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/civel/blog/direitos-consumidor-produto-defeituoso.html</loc>
+        <loc>https://acsacarlis.adv.br/civel/blog/direitos-consumidor-produto-defeituoso.html</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/civel/blog/nome-negativado-indevidamente.html</loc>
+        <loc>https://acsacarlis.adv.br/civel/blog/nome-negativado-indevidamente.html</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/civel/blog/usucapiao-o-que-e-quando-pedir.html</loc>
+        <loc>https://acsacarlis.adv.br/civel/blog/usucapiao-o-que-e-quando-pedir.html</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/familia/</loc>
+        <loc>https://acsacarlis.adv.br/familia/</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/familia/blog/</loc>
+        <loc>https://acsacarlis.adv.br/familia/blog/</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/familia/blog/adocao-como-funciona-processo.html</loc>
+        <loc>https://acsacarlis.adv.br/familia/blog/adocao-como-funciona-processo.html</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/familia/blog/alienacao-parental-o-que-e.html</loc>
+        <loc>https://acsacarlis.adv.br/familia/blog/alienacao-parental-o-que-e.html</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/familia/blog/divorcio-como-funciona-tipos.html</loc>
+        <loc>https://acsacarlis.adv.br/familia/blog/divorcio-como-funciona-tipos.html</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/familia/blog/guarda-dos-filhos-compartilhada-unilateral.html</loc>
+        <loc>https://acsacarlis.adv.br/familia/blog/guarda-dos-filhos-compartilhada-unilateral.html</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/familia/blog/inventario-e-heranca-primeiros-passos.html</loc>
+        <loc>https://acsacarlis.adv.br/familia/blog/inventario-e-heranca-primeiros-passos.html</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/familia/blog/partilha-de-bens-no-divorcio.html</loc>
+        <loc>https://acsacarlis.adv.br/familia/blog/partilha-de-bens-no-divorcio.html</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/familia/blog/pensao-alimenticia-como-e-calculada.html</loc>
+        <loc>https://acsacarlis.adv.br/familia/blog/pensao-alimenticia-como-e-calculada.html</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/familia/blog/reconhecimento-de-paternidade.html</loc>
+        <loc>https://acsacarlis.adv.br/familia/blog/reconhecimento-de-paternidade.html</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/familia/blog/regulamentacao-de-visitas.html</loc>
+        <loc>https://acsacarlis.adv.br/familia/blog/regulamentacao-de-visitas.html</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/familia/blog/uniao-estavel-direitos-como-formalizar.html</loc>
+        <loc>https://acsacarlis.adv.br/familia/blog/uniao-estavel-direitos-como-formalizar.html</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/previdenciario/</loc>
+        <loc>https://acsacarlis.adv.br/previdenciario/</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/previdenciario/blog/</loc>
+        <loc>https://acsacarlis.adv.br/previdenciario/blog/</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/previdenciario/blog/aposentadoria-pessoa-com-deficiencia.html</loc>
+        <loc>https://acsacarlis.adv.br/previdenciario/blog/aposentadoria-pessoa-com-deficiencia.html</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/previdenciario/blog/aposentadoria-por-idade-regras-atuais.html</loc>
+        <loc>https://acsacarlis.adv.br/previdenciario/blog/aposentadoria-por-idade-regras-atuais.html</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/previdenciario/blog/aposentadoria-por-tempo-contribuicao.html</loc>
+        <loc>https://acsacarlis.adv.br/previdenciario/blog/aposentadoria-por-tempo-contribuicao.html</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/previdenciario/blog/auxilio-acidente-diferenca-auxilio-doenca.html</loc>
+        <loc>https://acsacarlis.adv.br/previdenciario/blog/auxilio-acidente-diferenca-auxilio-doenca.html</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/previdenciario/blog/auxilio-doenca-como-solicitar.html</loc>
+        <loc>https://acsacarlis.adv.br/previdenciario/blog/auxilio-doenca-como-solicitar.html</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/previdenciario/blog/bpc-loas-quem-tem-direito.html</loc>
+        <loc>https://acsacarlis.adv.br/previdenciario/blog/bpc-loas-quem-tem-direito.html</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/previdenciario/blog/contribuicao-autonomo-mei-inss.html</loc>
+        <loc>https://acsacarlis.adv.br/previdenciario/blog/contribuicao-autonomo-mei-inss.html</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/previdenciario/blog/indeferimento-inss-o-que-fazer.html</loc>
+        <loc>https://acsacarlis.adv.br/previdenciario/blog/indeferimento-inss-o-que-fazer.html</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/previdenciario/blog/pensao-por-morte-quem-tem-direito.html</loc>
+        <loc>https://acsacarlis.adv.br/previdenciario/blog/pensao-por-morte-quem-tem-direito.html</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/previdenciario/blog/revisao-da-vida-toda-vale-a-pena.html</loc>
+        <loc>https://acsacarlis.adv.br/previdenciario/blog/revisao-da-vida-toda-vale-a-pena.html</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/empresarial/</loc>
+        <loc>https://acsacarlis.adv.br/empresarial/</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/empresarial/blog/</loc>
+        <loc>https://acsacarlis.adv.br/empresarial/blog/</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/empresarial/blog/abertura-de-empresa-tipo-societario.html</loc>
+        <loc>https://acsacarlis.adv.br/empresarial/blog/abertura-de-empresa-tipo-societario.html</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/empresarial/blog/conflitos-societarios-como-prevenir.html</loc>
+        <loc>https://acsacarlis.adv.br/empresarial/blog/conflitos-societarios-como-prevenir.html</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/empresarial/blog/contrato-entre-socios-o-que-nao-pode-faltar.html</loc>
+        <loc>https://acsacarlis.adv.br/empresarial/blog/contrato-entre-socios-o-que-nao-pode-faltar.html</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/empresarial/blog/contratos-comerciais-clausulas-essenciais.html</loc>
+        <loc>https://acsacarlis.adv.br/empresarial/blog/contratos-comerciais-clausulas-essenciais.html</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/empresarial/blog/dissolucao-de-sociedade-como-funciona.html</loc>
+        <loc>https://acsacarlis.adv.br/empresarial/blog/dissolucao-de-sociedade-como-funciona.html</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/empresarial/blog/due-diligence-por-que-analisar-antes-de-comprar.html</loc>
+        <loc>https://acsacarlis.adv.br/empresarial/blog/due-diligence-por-que-analisar-antes-de-comprar.html</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/empresarial/blog/governanca-em-empresas-familiares.html</loc>
+        <loc>https://acsacarlis.adv.br/empresarial/blog/governanca-em-empresas-familiares.html</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/empresarial/blog/protecao-de-marca-propriedade-intelectual.html</loc>
+        <loc>https://acsacarlis.adv.br/empresarial/blog/protecao-de-marca-propriedade-intelectual.html</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/empresarial/blog/recuperacao-judicial-quando-faz-sentido.html</loc>
+        <loc>https://acsacarlis.adv.br/empresarial/blog/recuperacao-judicial-quando-faz-sentido.html</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/empresarial/blog/responsabilidade-socios-dividas-empresa.html</loc>
+        <loc>https://acsacarlis.adv.br/empresarial/blog/responsabilidade-socios-dividas-empresa.html</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/tributario/</loc>
+        <loc>https://acsacarlis.adv.br/tributario/</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/tributario/blog/</loc>
+        <loc>https://acsacarlis.adv.br/tributario/blog/</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/tributario/blog/defesa-em-autuacao-fiscal.html</loc>
+        <loc>https://acsacarlis.adv.br/tributario/blog/defesa-em-autuacao-fiscal.html</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/tributario/blog/elisao-x-evasao-fiscal-diferenca.html</loc>
+        <loc>https://acsacarlis.adv.br/tributario/blog/elisao-x-evasao-fiscal-diferenca.html</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/tributario/blog/execucao-fiscal-como-se-defender.html</loc>
+        <loc>https://acsacarlis.adv.br/tributario/blog/execucao-fiscal-como-se-defender.html</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/tributario/blog/imposto-de-renda-erros-comuns-malha-fina.html</loc>
+        <loc>https://acsacarlis.adv.br/tributario/blog/imposto-de-renda-erros-comuns-malha-fina.html</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/tributario/blog/itcmd-imposto-sobre-heranca.html</loc>
+        <loc>https://acsacarlis.adv.br/tributario/blog/itcmd-imposto-sobre-heranca.html</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/tributario/blog/parcelamento-de-dividas-tributarias.html</loc>
+        <loc>https://acsacarlis.adv.br/tributario/blog/parcelamento-de-dividas-tributarias.html</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/tributario/blog/planejamento-sucessorio-e-tributacao.html</loc>
+        <loc>https://acsacarlis.adv.br/tributario/blog/planejamento-sucessorio-e-tributacao.html</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/tributario/blog/planejamento-tributario-o-que-e.html</loc>
+        <loc>https://acsacarlis.adv.br/tributario/blog/planejamento-tributario-o-que-e.html</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/tributario/blog/restituicao-de-tributos-pagos-indevidamente.html</loc>
+        <loc>https://acsacarlis.adv.br/tributario/blog/restituicao-de-tributos-pagos-indevidamente.html</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/tributario/blog/simples-nacional-exclusao-como-reverter.html</loc>
+        <loc>https://acsacarlis.adv.br/tributario/blog/simples-nacional-exclusao-como-reverter.html</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.acsacarlis.adv.br/trabalhista/</loc>
+        <loc>https://acsacarlis.adv.br/trabalhista/</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
