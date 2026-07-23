@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.acsacarlis.adv.br/sitemap.xml
+Sitemap: https://acsacarlis.adv.br/sitemap.xml
