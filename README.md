@@ -94,9 +94,25 @@ docker compose restart
 
 ## Deploy em VPS / Portainer
 
-1. Suba a pasta inteira (ou faça `git clone`) na VPS.
-2. Em Portainer: **Stacks → Add stack → Upload `docker-compose.yml`** (e build do Dockerfile via repositório).
-3. Conecte ao seu reverse proxy (Traefik/Nginx Proxy Manager) via a network `web` ou exponha a porta 80.
+**A imagem NÃO é buildada no servidor.** O GitHub Actions builda a cada push em `main`
+([.github/workflows/docker-publish.yml](.github/workflows/docker-publish.yml)) e publica em
+`ghcr.io/viniciusgnandt/acsacarlis:latest`. O servidor só baixa a imagem pronta:
+
+```bash
+# No servidor, a cada deploy:
+docker compose pull
+docker compose up -d
+```
+
+Se o repositório do GHCR estiver privado, autentique o servidor uma vez com um Personal Access
+Token (escopo `read:packages`): `docker login ghcr.io -u SEU_USUARIO`. Ou torne o pacote público em
+GitHub → seu perfil → Packages → acsacarlis → Package settings.
+
+Para buildar localmente (dev/teste), use o override:
+
+```bash
+docker compose -f docker-compose.yml -f docker-compose.build.yml up -d --build
+```
 
 ---
 
