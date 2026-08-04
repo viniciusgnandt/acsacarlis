@@ -1,5 +1,9 @@
 FROM node:20-alpine AS build
 
+# git é necessário em tempo de build: scripts/build-html.js usa `git log` para
+# preencher o <lastmod> de cada página no sitemap.xml gerado.
+RUN apk add --no-cache git
+
 WORKDIR /build
 
 COPY package.json package-lock.json* ./
@@ -10,6 +14,8 @@ COPY partials/ ./partials/
 COPY scripts/ ./scripts/
 COPY src/ ./src/
 COPY site/ ./site/
+COPY .git/ ./.git/
+RUN git config --global --add safe.directory /build
 RUN npm run build
 
 FROM nginx:1.27-alpine

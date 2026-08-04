@@ -191,7 +191,7 @@ function buildSitemap(relPaths) {
     .map((rel) => {
       const loc = `${SITE_URL}/${urlFor(rel)}`;
       const { priority, changefreq } = priorityFor(rel);
-      const lastmod = rel === 'index.html' ? null : lastmodFor(path.join('src', 'pages', rel));
+      const lastmod = rel === 'index.html' ? null : lastmodFor(`src/pages/${rel}`);
       return { loc, lastmod, changefreq, priority };
     });
 
