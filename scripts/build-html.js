@@ -1,14 +1,20 @@
 #!/usr/bin/env node
 // Resolves <!--@include header ...--> / <!--@include footer ...--> markers in src/pages/**/*.html
 // against partials/header.html and partials/footer.html, writing the assembled
-// static HTML into site/**/*.html (mirroring the relative path).
+// static HTML into site/**/*.html (mirroring the relative path). Also regenerates
+// site/sitemap.xml from the same page list, using `git log` as the source of truth
+// for <lastmod> — no more manually-edited dates going stale.
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
 const ROOT = path.join(__dirname, '..');
 const PAGES_DIR = path.join(ROOT, 'src', 'pages');
 const PARTIALS_DIR = path.join(ROOT, 'partials');
 const SITE_DIR = path.join(ROOT, 'site');
+const SITE_URL = (fs.existsSync(path.join(ROOT, '.env'))
+  ? (fs.readFileSync(path.join(ROOT, '.env'), 'utf8').match(/^SITE_URL=(.+)$/m) || [])[1]
+  : null) || process.env.SITE_URL || 'https://acsacarlis.adv.br';
 
 const NAV_SETS = {
   default: [
@@ -134,16 +140,80 @@ function processFile(srcPath, destPath) {
   console.log('Built', path.relative(ROOT, destPath));
 }
 
-function walk(dir) {
+function walk(dir, out) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
     const full = path.join(dir, entry.name);
     if (entry.isDirectory()) {
-      walk(full);
+      walk(full, out);
     } else if (entry.name.endsWith('.html')) {
       const rel = path.relative(PAGES_DIR, full);
       processFile(full, path.join(SITE_DIR, rel));
+      out.push(rel.split(path.sep).join('/'));
     }
   }
 }
 
-walk(PAGES_DIR);
+// --- Sitemap ---------------------------------------------------------------
+// Priority/changefreq follow the site's existing convention: home > primary
+// paid landing (/trabalhista/) and calculator > area hub pages / sobre / empresas
+// > blog indexes > individual blog articles. 404 is excluded.
+function urlFor(rel) {
+  if (rel === 'index.html') return '';
+  if (rel.endsWith('/index.html')) return rel.slice(0, -'index.html'.length);
+  return rel;
+}
+
+function priorityFor(rel) {
+  if (rel === 'index.html') return { priority: '1.0', changefreq: 'monthly' };
+  if (rel === 'calculadora-trabalhista.html') return { priority: '0.9', changefreq: 'monthly' };
+  if (rel === 'trabalhista/index.html') return { priority: '0.9', changefreq: 'monthly' };
+  if (rel === 'sobre.html' || rel === 'empresas.html') return { priority: '0.8', changefreq: 'monthly' };
+  if (rel === 'trabalhista/blog/index.html') return { priority: '0.8', changefreq: 'weekly' };
+  if (/\/blog\/index\.html$/.test(rel) || rel === 'blog-empresas/index.html') return { priority: '0.7', changefreq: 'weekly' };
+  if (/^[a-z-]+\/index\.html$/.test(rel)) return { priority: '0.8', changefreq: 'monthly' }; // area hubs
+  return { priority: '0.7', changefreq: 'monthly' }; // individual blog articles
+}
+
+function lastmodFor(srcRelPath) {
+  try {
+    const out = execSync(`git log -1 --format=%cs -- "${srcRelPath}"`, { cwd: ROOT, stdio: ['ignore', 'pipe', 'ignore'] })
+      .toString()
+      .trim();
+    return out || null;
+  } catch {
+    return null;
+  }
+}
+
+function buildSitemap(relPaths) {
+  const entries = relPaths
+    .filter((rel) => rel !== '404.html')
+    .map((rel) => {
+      const loc = `${SITE_URL}/${urlFor(rel)}`;
+      const { priority, changefreq } = priorityFor(rel);
+      const lastmod = rel === 'index.html' ? null : lastmodFor(path.join('src', 'pages', rel));
+      return { loc, lastmod, changefreq, priority };
+    });
+
+  const xml = [
+    '<?xml version="1.0" encoding="UTF-8"?>',
+    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+    ...entries.map((e) => [
+      '    <url>',
+      `        <loc>${e.loc}</loc>`,
+      e.lastmod ? `        <lastmod>${e.lastmod}</lastmod>` : null,
+      `        <changefreq>${e.changefreq}</changefreq>`,
+      `        <priority>${e.priority}</priority>`,
+      '    </url>',
+    ].filter(Boolean).join('\n')),
+    '</urlset>',
+    '',
+  ].join('\n');
+
+  fs.writeFileSync(path.join(SITE_DIR, 'sitemap.xml'), xml);
+  console.log(`Built sitemap.xml (${entries.length} URLs)`);
+}
+
+const pageList = [];
+walk(PAGES_DIR, pageList);
+buildSitemap(pageList);
