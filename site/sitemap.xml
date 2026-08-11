@@ -366,6 +366,21 @@
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>https://acsacarlis.adv.br/trabalhista/acidente-trabalho.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://acsacarlis.adv.br/trabalhista/assedio-moral.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://acsacarlis.adv.br/trabalhista/aviso-previo-rescisao.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
         <loc>https://acsacarlis.adv.br/trabalhista/blog/acidente-de-trabalho-direitos.html</loc>
         <lastmod>2026-08-04</lastmod>
         <changefreq>monthly</changefreq>
@@ -456,10 +471,20 @@
         <priority>0.7</priority>
     </url>
     <url>
+        <loc>https://acsacarlis.adv.br/trabalhista/fgts-horas-extras.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
         <loc>https://acsacarlis.adv.br/trabalhista/</loc>
-        <lastmod>2026-08-04</lastmod>
+        <lastmod>2026-08-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://acsacarlis.adv.br/trabalhista/justa-causa.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
     </url>
     <url>
         <loc>https://acsacarlis.adv.br/tributario/blog/defesa-em-autuacao-fiscal.html</loc>
