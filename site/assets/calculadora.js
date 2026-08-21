@@ -52,6 +52,8 @@ document.addEventListener('DOMContentLoaded', function () {
         var feriasVencidas = document.getElementById('calc-ferias-vencidas').checked;
         var fgtsInformadoRaw = document.getElementById('calc-fgts').value;
         var fgtsInformado = fgtsInformadoRaw ? parseFloat(fgtsInformadoRaw.replace(',', '.')) : null;
+        var diasFalta = parseInt(document.getElementById('calc-faltas').value, 10) || 0;
+        var outrosDescontos = parseFloat((document.getElementById('calc-outros-descontos').value || '').replace(',', '.')) || 0;
 
         if (!salario || !admissao || !demissao || isNaN(admissao.getTime()) || isNaN(demissao.getTime()) || demissao <= admissao) {
             erroBox.classList.remove('hidden');
@@ -124,6 +126,17 @@ document.addEventListener('DOMContentLoaded', function () {
             total += decimoTerceiro;
         }
         // justa-causa: nenhuma verba adicional além do saldo e férias vencidas já somados acima
+
+        if (diasFalta > 0) {
+            var descontoFaltas = (salario / 30) * diasFalta;
+            itens.push(['Desconto por falta não justificada (' + diasFalta + ' dia(s))', -descontoFaltas]);
+            total -= descontoFaltas;
+        }
+
+        if (outrosDescontos > 0) {
+            itens.push(['Outros descontos informados', -outrosDescontos]);
+            total -= outrosDescontos;
+        }
 
         var html = '';
         itens.forEach(function (item) {

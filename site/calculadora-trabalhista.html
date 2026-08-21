@@ -164,6 +164,20 @@
                     <p class="text-xs text-gray-500 mt-1">Se você não souber, a calculadora estima com base no salário e no tempo trabalhado.</p>
                 </div>
 
+                <div>
+                    <label for="calc-faltas" class="block text-sm font-semibold text-gray-700 mb-1.5">Dias de falta não justificada no último mês (opcional)</label>
+                    <input type="text" inputmode="numeric" id="calc-faltas" placeholder="Ex: 3 — deixe em branco se não teve faltas"
+                           class="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-marsala/40 focus:border-marsala">
+                    <p class="text-xs text-gray-500 mt-1">Cada dia de falta desconta o valor proporcional do salário do dia.</p>
+                </div>
+
+                <div>
+                    <label for="calc-outros-descontos" class="block text-sm font-semibold text-gray-700 mb-1.5">Outros descontos (opcional)</label>
+                    <input type="text" inputmode="decimal" id="calc-outros-descontos" placeholder="Ex: empréstimo consignado, adiantamento, vale já recebido"
+                           class="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-marsala/40 focus:border-marsala">
+                    <p class="text-xs text-gray-500 mt-1">Some qualquer valor que a empresa já informou que vai descontar (empréstimos, adiantamentos, etc.).</p>
+                </div>
+
                 <label class="flex items-center gap-2.5 cursor-pointer">
                     <input type="checkbox" id="calc-ferias-vencidas" class="w-4 h-4 rounded border-gray-300 text-marsala focus:ring-marsala/40">
                     <span class="text-sm text-gray-700">Tenho um período completo de férias vencidas (não gozadas)</span>
