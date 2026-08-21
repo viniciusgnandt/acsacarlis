@@ -7,6 +7,15 @@ document.addEventListener('DOMContentLoaded', function () {
     var resultBox = document.getElementById('calc-resultado');
     var resultContent = document.getElementById('calc-resultado-conteudo');
     var erroBox = document.getElementById('calc-erro');
+    var whatsappLink = document.getElementById('calc-whatsapp-link');
+
+    var TIPO_LABELS = {
+        'sem-justa-causa': 'demissão sem justa causa',
+        'rescisao-indireta': 'rescisão indireta',
+        'pedido-demissao': 'pedido de demissão',
+        'acordo': 'demissão por acordo (Art. 484-A da CLT)',
+        'justa-causa': 'demissão por justa causa'
+    };
 
     function diffInMonthsWithRoundingRule(start, end) {
         var months = (end.getFullYear() - start.getFullYear()) * 12 + (end.getMonth() - start.getMonth());
@@ -128,6 +137,21 @@ document.addEventListener('DOMContentLoaded', function () {
         resultContent.innerHTML = html;
         resultBox.classList.remove('hidden');
         resultBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+        if (whatsappLink) {
+            var tipoLabel = TIPO_LABELS[tipo] || tipo;
+            var fmtData = function (d) { return d.toLocaleDateString('pt-BR'); };
+            var msg = 'Olá Dra. Acsa, usei a calculadora do site e gostaria de confirmar os valores da minha rescisão.\n\n' +
+                'Tipo de desligamento: ' + tipoLabel + '\n' +
+                'Salário informado: ' + formatBRL(salario) + '\n' +
+                'Admissão: ' + fmtData(admissao) + ' | Desligamento: ' + fmtData(demissao) + '\n\n' +
+                'Detalhamento estimado:\n';
+            itens.forEach(function (item) {
+                msg += '- ' + item[0] + ': ' + formatBRL(item[1]) + '\n';
+            });
+            msg += '\nTotal estimado: ' + formatBRL(total);
+            whatsappLink.href = 'https://wa.me/5511933918439?text=' + encodeURIComponent(msg);
+        }
 
         try {
             if (typeof window.dataLayer !== 'undefined') {
