@@ -18,7 +18,7 @@ function trackConversion(source) {
         if (typeof window.dataLayer !== 'undefined') {
             window.dataLayer.push({
                 event: 'whatsapp_click',
-                source: source || 'unknown',
+                cta_origem: source || 'unknown',
             });
         }
     } catch (e) {
