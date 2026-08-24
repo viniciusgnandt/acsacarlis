@@ -4,6 +4,53 @@ document.addEventListener('DOMContentLoaded', function () {
     if (yearEl) yearEl.textContent = new Date().getFullYear();
 });
 
+// Captura do GCLID (identificador de clique do Google Ads) para permitir,
+// no futuro, importar de volta ao Ads quais cliques viraram clientes reais
+// (Conversion Import). Guardado por até 90 dias, mesma janela de conversão
+// usada na conta.
+var GCLID_STORAGE_KEY = 'acsa_gclid';
+var GCLID_MAX_AGE_MS = 90 * 24 * 60 * 60 * 1000;
+
+function captureGclid() {
+    try {
+        var params = new URLSearchParams(window.location.search);
+        var gclid = params.get('gclid');
+        if (gclid) {
+            localStorage.setItem(GCLID_STORAGE_KEY, JSON.stringify({ value: gclid, ts: Date.now() }));
+            return gclid;
+        }
+        var stored = localStorage.getItem(GCLID_STORAGE_KEY);
+        if (!stored) return null;
+        var parsed = JSON.parse(stored);
+        if (!parsed || !parsed.value || (Date.now() - parsed.ts) > GCLID_MAX_AGE_MS) return null;
+        return parsed.value;
+    } catch (e) {
+        return null;
+    }
+}
+window.acsaGetGclid = captureGclid;
+
+// Anexa o GCLID guardado ao texto de todos os links de WhatsApp da página,
+// para que a referência apareça na própria conversa e a Dra. possa registrar
+// na planilha de leads.
+document.addEventListener('DOMContentLoaded', function () {
+    var gclid = captureGclid();
+    if (!gclid) return;
+
+    document.querySelectorAll('a[href^="https://wa.me/"]').forEach(function (link) {
+        try {
+            var url = new URL(link.href);
+            var text = url.searchParams.get('text') || '';
+            if (text.indexOf('Ref (Ads):') !== -1) return;
+            text += (text ? '\n\n' : '') + 'Ref (Ads): ' + gclid;
+            url.searchParams.set('text', text);
+            link.href = url.toString();
+        } catch (e) {
+            // silencioso — não interrompe a navegação
+        }
+    });
+});
+
 // Tracking de conversão para Google Ads (preparado para fase 2)
 // Basta descomentar o trecho do gtag no index.html e configurar o conversion ID/label.
 function trackConversion(source) {

@@ -163,6 +163,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 msg += '- ' + item[0] + ': ' + formatBRL(item[1]) + '\n';
             });
             msg += '\nTotal estimado: ' + formatBRL(total);
+
+            var gclid = typeof window.acsaGetGclid === 'function' ? window.acsaGetGclid() : null;
+            if (gclid) msg += '\n\nRef (Ads): ' + gclid;
+
             whatsappLink.href = 'https://wa.me/5511933918439?text=' + encodeURIComponent(msg);
         }
 
