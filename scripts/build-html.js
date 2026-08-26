@@ -126,11 +126,15 @@ function renderScripts() {
   return fs.readFileSync(path.join(PARTIALS_DIR, 'scripts.html'), 'utf8');
 }
 
-const RENDERERS = { header: renderHeader, footer: renderFooter, scripts: renderScripts };
+function renderHeadAssets() {
+  return fs.readFileSync(path.join(PARTIALS_DIR, 'head-assets.html'), 'utf8');
+}
+
+const RENDERERS = { header: renderHeader, footer: renderFooter, scripts: renderScripts, 'head-assets': renderHeadAssets };
 
 function processFile(srcPath, destPath) {
   let html = fs.readFileSync(srcPath, 'utf8');
-  const includeRe = /<!--@include\s+(header|footer|scripts)\s*([^>]*)-->/g;
+  const includeRe = /<!--@include\s+(header|footer|scripts|head-assets)\s*([^>]*)-->/g;
   html = html.replace(includeRe, (match, type, attrStr) => {
     const attrs = parseAttrs(attrStr);
     return RENDERERS[type](attrs);
