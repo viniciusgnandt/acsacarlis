@@ -51,8 +51,12 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// Tracking de conversão para Google Ads (preparado para fase 2)
-// Basta descomentar o trecho do gtag no index.html e configurar o conversion ID/label.
+// Tracking de conversão para Google Ads.
+// Conversão "WhatsApp Empresas" (secundária, não usada para lances) — dispara
+// além da conversão principal sempre que a origem do clique for da página de
+// empresas (prefixo "empresas_" nos data-source usados em empresas.html).
+var GADS_SEND_TO_EMPRESAS = 'AW-18169591826/YLRuCPml7uwcEJLw99dD';
+
 function trackConversion(source) {
     try {
         if (typeof gtag === 'function' && window.__GADS_SEND_TO__) {
@@ -60,6 +64,13 @@ function trackConversion(source) {
                 send_to: window.__GADS_SEND_TO__,
                 event_category: 'whatsapp',
                 event_label: source || 'unknown',
+            });
+        }
+        if (typeof gtag === 'function' && source && source.indexOf('empresas_') === 0) {
+            gtag('event', 'conversion', {
+                send_to: GADS_SEND_TO_EMPRESAS,
+                event_category: 'whatsapp_empresas',
+                event_label: source,
             });
         }
         if (typeof window.dataLayer !== 'undefined') {
