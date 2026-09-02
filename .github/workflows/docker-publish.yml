@@ -42,3 +42,17 @@ jobs:
           tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
+
+      - name: Disparar deploy no Portainer
+        run: curl -sf -X POST "${{ secrets.PORTAINER_WEBHOOK }}"
+
+      - name: Health check pós-deploy
+        run: |
+          echo "Aguardando site voltar no ar..."
+          for i in $(seq 1 30); do
+            STATUS=$(curl -s -o /dev/null -w "%{http_code}" https://acsacarlis.adv.br/)
+            echo "Tentativa $i — HTTP $STATUS"
+            if [ "$STATUS" = "200" ]; then echo "✅ Site OK"; exit 0; fi
+            sleep 5
+          done
+          echo "❌ Health check falhou"; exit 1
