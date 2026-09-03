@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var gclid = captureGclid();
     if (!gclid) return;
 
-    document.querySelectorAll('a[href^="https://wa.me/"]').forEach(function (link) {
+    document.querySelectorAll('a[href^="https://wa.me/"], a[href^="https://api.whatsapp.com/send"]').forEach(function (link) {
         try {
             var url = new URL(link.href);
             var text = url.searchParams.get('text') || '';
