@@ -79,11 +79,66 @@ function trackConversion(source) {
                 cta_origem: source || 'unknown',
             });
         }
+        registerPendingWhatsappReturn(source);
     } catch (e) {
         // silencioso — não interrompe o redirecionamento ao WhatsApp
     }
 }
 window.trackConversion = trackConversion;
+
+// Sinal aproximado de que a mensagem provavelmente foi enviada no WhatsApp.
+//
+// Não temos como saber com certeza se o usuário digitou e enviou a mensagem
+// (isso acontece fora do nosso site, dentro do app/WhatsApp Web). O que dá
+// pra observar é: o usuário saiu da aba (clicou no CTA) e depois voltou a ela
+// depois de um tempo mínimo — comportamento consistente com quem realmente
+// abriu a conversa e mandou a mensagem, diferente de quem clicou e fechou/
+// voltou instantaneamente (ex: clique acidental, ou desistiu ao ver o app não
+// abrir). É uma aproximação, não uma prova — por isso o nome do evento deixa
+// isso explícito ("provavel").
+var WA_RETURN_STORAGE_KEY = 'acsa_wa_pending_return';
+var WA_RETURN_MIN_AWAY_MS = 6 * 1000; // tempo mínimo fora da aba pra contar como "provável envio"
+var WA_RETURN_MAX_WINDOW_MS = 30 * 60 * 1000; // além disso, considera clique "frio" e ignora
+
+function registerPendingWhatsappReturn(source) {
+    try {
+        sessionStorage.setItem(WA_RETURN_STORAGE_KEY, JSON.stringify({
+            ts: Date.now(),
+            origem: source || 'unknown',
+        }));
+    } catch (e) {
+        // localStorage/sessionStorage pode estar bloqueado (modo privado) — sem problema, só não mede esse sinal
+    }
+}
+
+function checkWhatsappReturn() {
+    try {
+        if (document.visibilityState !== 'visible') return;
+        var raw = sessionStorage.getItem(WA_RETURN_STORAGE_KEY);
+        if (!raw) return;
+
+        var pending = JSON.parse(raw);
+        sessionStorage.removeItem(WA_RETURN_STORAGE_KEY); // dispara no máximo uma vez por clique
+
+        var elapsed = Date.now() - pending.ts;
+        if (elapsed < WA_RETURN_MIN_AWAY_MS || elapsed > WA_RETURN_MAX_WINDOW_MS) return;
+
+        if (typeof window.dataLayer !== 'undefined') {
+            window.dataLayer.push({
+                event: 'whatsapp_retorno_provavel',
+                cta_origem: pending.origem,
+                tempo_fora_ms: elapsed,
+            });
+        }
+    } catch (e) {
+        // silencioso
+    }
+}
+
+document.addEventListener('visibilitychange', checkWhatsappReturn);
+// Cobre também o caso de foco de janela (alguns navegadores/mobile disparam
+// isso em vez de visibilitychange em certas transições).
+window.addEventListener('focus', checkWhatsappReturn);
 
 // Menu hambúrguer (mobile)
 document.addEventListener('DOMContentLoaded', function () {
