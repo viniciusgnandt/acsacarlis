@@ -43,8 +43,13 @@ function main() {
     for (var i = 1; i < data.length; i++) {
         var row = data[i];
         var gclid = row[COL_GCLID];
+        var nome = row[COL_NAME];
         var jaEnviado = row[COL_ENVIADO];
-        if (!gclid || jaEnviado === true || jaEnviado === 'TRUE') continue;
+        // GCLID sozinho não basta: o webhook do site grava o clique automaticamente
+        // (colunas F/G), mas a linha só vira conversão de verdade depois que a Dra.
+        // confirma a conversa e preenche "Conversion Name" manualmente. Sem isso,
+        // exigir só o GCLID enviaria todo clique do site como cliente real.
+        if (!gclid || !nome || jaEnviado === true || jaEnviado === 'TRUE') continue;
         pendentes.push({ linha: i + 1, row: row });
     }
 
