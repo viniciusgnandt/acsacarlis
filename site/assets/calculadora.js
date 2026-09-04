@@ -164,10 +164,7 @@ document.addEventListener('DOMContentLoaded', function () {
             });
             msg += '\nTotal estimado: ' + formatBRL(total);
 
-            var gclid = typeof window.acsaGetGclid === 'function' ? window.acsaGetGclid() : null;
-            if (gclid) msg += '\n\nRef (Ads): ' + gclid;
-
-            whatsappLink.href = 'https://wa.me/5511933918439?text=' + encodeURIComponent(msg);
+            whatsappLink.href = 'https://api.whatsapp.com/send?phone=5511933918439&app_absent=0&text=' + encodeURIComponent(msg);
         }
 
         try {

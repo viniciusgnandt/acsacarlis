@@ -30,26 +30,26 @@ function captureGclid() {
 }
 window.acsaGetGclid = captureGclid;
 
-// Anexa o GCLID guardado ao texto de todos os links de WhatsApp da página,
-// para que a referência apareça na própria conversa e a Dra. possa registrar
-// na planilha de leads.
-document.addEventListener('DOMContentLoaded', function () {
-    var gclid = captureGclid();
-    if (!gclid) return;
+// Registra o GCLID automaticamente numa planilha (aba "Cliques (Auto)"),
+// em vez de anexá-lo como texto visível na mensagem do WhatsApp — evita que
+// o cliente veja um código longo e "de máquina" no meio da conversa.
+// Envio "fire and forget": não bloqueia nem atrasa a abertura do WhatsApp.
+var GCLID_WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbz1JQdcPWL3WZeJTnfyIUbVg8BgMgghi6C8lGud80Mlt9zmdHt49xEl_hylh0GmjWHy/exec';
 
-    document.querySelectorAll('a[href^="https://wa.me/"], a[href^="https://api.whatsapp.com/send"]').forEach(function (link) {
-        try {
-            var url = new URL(link.href);
-            var text = url.searchParams.get('text') || '';
-            if (text.indexOf('Ref (Ads):') !== -1) return;
-            text += (text ? '\n\n' : '') + 'Ref (Ads): ' + gclid;
-            url.searchParams.set('text', text);
-            link.href = url.toString();
-        } catch (e) {
-            // silencioso — não interrompe a navegação
+function reportGclidClick(source) {
+    try {
+        var gclid = captureGclid();
+        if (!gclid) return;
+        var url = GCLID_WEBHOOK_URL + '?gclid=' + encodeURIComponent(gclid) + '&origem=' + encodeURIComponent(source || 'unknown');
+        if (navigator.sendBeacon) {
+            navigator.sendBeacon(url);
+        } else {
+            fetch(url, { mode: 'no-cors', keepalive: true });
         }
-    });
-});
+    } catch (e) {
+        // silencioso — não interrompe o redirecionamento ao WhatsApp
+    }
+}
 
 // Tracking de conversão para Google Ads.
 // Conversão "WhatsApp Empresas" (secundária, não usada para lances) — dispara
@@ -80,6 +80,7 @@ function trackConversion(source) {
             });
         }
         registerPendingWhatsappReturn(source);
+        reportGclidClick(source);
     } catch (e) {
         // silencioso — não interrompe o redirecionamento ao WhatsApp
     }
