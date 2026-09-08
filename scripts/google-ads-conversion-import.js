@@ -39,6 +39,14 @@ function main() {
     var COL_TIME = 2;
     var COL_ENVIADO = 3;
 
+    // O Ads recusa (\"não foi possível decodificar o GCLID\") cliques muito
+    // recentes — o próprio Google recomenda esperar pelo menos 1 dia antes de
+    // importar. Confirmado na prática em 2026-09-08: de 3 linhas pendentes,
+    // as 2 de clique com poucas horas falharam, só a mais antiga passou —
+    // não tinha relação com o formato do GCLID, era só idade.
+    var IDADE_MINIMA_MS = 24 * 60 * 60 * 1000;
+    var agora = new Date();
+
     var pendentes = [];
     for (var i = 1; i < data.length; i++) {
         var row = data[i];
@@ -50,6 +58,8 @@ function main() {
         // confirma a conversa e preenche "Conversion Name" manualmente. Sem isso,
         // exigir só o GCLID enviaria todo clique do site como cliente real.
         if (!gclid || !nome || jaEnviado === true || jaEnviado === 'TRUE') continue;
+        var horaConversao = (row[COL_TIME] instanceof Date) ? row[COL_TIME] : new Date(row[COL_TIME]);
+        if (isNaN(horaConversao.getTime()) || (agora - horaConversao) < IDADE_MINIMA_MS) continue; // ainda muito recente, tenta de novo amanhã
         pendentes.push({ linha: i + 1, row: row });
     }
 
@@ -85,8 +95,11 @@ function main() {
     }
 }
 
-// O Ads exige o formato "aaaa-MM-dd HH:mm:ss-03:00" (fuso de São Paulo).
+// O Ads só aceita o offset de fuso SEM dois-pontos (ex: "-0300"), formato "Z"
+// do SimpleDateFormat — não confundir com "XXX" (ISO 8601), que gera "-03:00"
+// e é rejeitado pelo import ("Conversion Time inválido"). Confirmado batendo
+// com a lista de formatos aceitos na documentação do Ads (2026-09-04).
 function formatarDataHora(valor) {
     var data = (valor instanceof Date) ? valor : new Date(valor);
-    return Utilities.formatDate(data, 'America/Sao_Paulo', "yyyy-MM-dd HH:mm:ssXXX");
+    return Utilities.formatDate(data, 'America/Sao_Paulo', "yyyy-MM-dd HH:mm:ssZ");
 }
