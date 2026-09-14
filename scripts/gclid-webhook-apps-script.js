@@ -51,19 +51,25 @@ function handleClick(e) {
             var sheetLead = ss.getSheetByName('Leads Calculadora');
             if (!sheetLead) {
                 sheetLead = ss.insertSheet('Leads Calculadora');
-                sheetLead.appendRow(['Timestamp', 'Nome', 'Telefone', 'Quer ser contatado(a)', 'Salário informado', 'Tipo de desligamento', 'Total estimado', 'Canal', 'Página de origem', 'Google Click ID']);
+                sheetLead.appendRow(['Timestamp', 'Nome', 'Telefone', 'Quer ser contatado(a)', 'Salário informado', 'Data de admissão', 'Data de desligamento', 'Tipo de desligamento', 'FGTS informado', 'Dias de falta', 'Outros descontos', 'Férias vencidas', 'Total estimado', 'Canal', 'Página de origem', 'Google Click ID']);
             }
             var nome = e.parameter.nome || '';
             var telefone = e.parameter.telefone || '';
             var consentiu = (nome || telefone) ? ((e.parameter.consentiu === 'sim') ? 'Sim' : 'Não') : '';
             var salario = e.parameter.salario || '';
+            var admissao = e.parameter.admissao || '';
+            var demissao = e.parameter.demissao || '';
             var tipo = e.parameter.tipo || '';
+            var fgtsInformado = e.parameter.fgts_informado || '';
+            var diasFalta = e.parameter.dias_falta || '';
+            var outrosDescontos = e.parameter.outros_descontos || '';
+            var feriasVencidas = (e.parameter.ferias_vencidas === 'sim') ? 'Sim' : 'Não';
             var totalEstimado = e.parameter.total_estimado || '';
             var canal = e.parameter.canal || '';
             var paginaOrigem = e.parameter.pagina_origem || '';
             // Grava toda vez que a calculadora é usada, com ou sem nome/telefone
             // — linhas sem contato servem só como volume de uso da ferramenta.
-            sheetLead.appendRow([ts, nome, telefone, consentiu, salario, tipo, totalEstimado, canal, paginaOrigem, gclid]);
+            sheetLead.appendRow([ts, nome, telefone, consentiu, salario, admissao, demissao, tipo, fgtsInformado, diasFalta, outrosDescontos, feriasVencidas, totalEstimado, canal, paginaOrigem, gclid]);
         } else if (gclid) {
             var sheet = ss.getSheetByName('Cliques (Auto)');
             if (!sheet) {

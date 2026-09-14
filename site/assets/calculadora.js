@@ -181,7 +181,13 @@ document.addEventListener('DOMContentLoaded', function () {
                     nome: nomeEl ? nomeEl.value.trim() : '',
                     telefone: telefoneEl ? telefoneEl.value.trim() : '',
                     salario: salario,
+                    admissao: admissaoVal,
+                    demissao: demissaoVal,
                     tipo: tipo,
+                    fgtsInformado: fgtsInformadoRaw || '',
+                    diasFalta: diasFalta || '',
+                    outrosDescontos: outrosDescontos || '',
+                    feriasVencidas: feriasVencidas ? 'sim' : 'nao',
                     totalEstimado: total
                 });
             }

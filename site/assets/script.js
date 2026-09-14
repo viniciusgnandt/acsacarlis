@@ -67,7 +67,13 @@ function reportCalculadoraLead(data) {
         params.set('telefone', data.telefone || '');
         params.set('consentiu', (data.nome || data.telefone) ? 'sim' : '');
         params.set('salario', data.salario || '');
+        params.set('admissao', data.admissao || '');
+        params.set('demissao', data.demissao || '');
         params.set('tipo', data.tipo || '');
+        params.set('fgts_informado', data.fgtsInformado || '');
+        params.set('dias_falta', data.diasFalta || '');
+        params.set('outros_descontos', data.outrosDescontos || '');
+        params.set('ferias_vencidas', data.feriasVencidas || '');
         params.set('total_estimado', data.totalEstimado || '');
         params.set('pagina_origem', document.referrer || 'direto');
         var gclid = captureGclid();
