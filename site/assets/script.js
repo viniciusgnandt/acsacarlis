@@ -51,6 +51,40 @@ function reportGclidClick(source) {
     }
 }
 
+// Envia todo uso da calculadora pra mesma planilha do GCLID, numa aba
+// separada ("Leads Calculadora") — reaproveita o mesmo webhook/Apps Script
+// já usado pro registro automático de cliques em vez de criar um serviço
+// novo. Dispara sempre, mesmo quando a pessoa não deixa nome/telefone (fica
+// como lead anônimo, útil pra ver volume de uso da calculadora); quando
+// preenche nome ou telefone, o próprio formulário deixa explícito que isso
+// já vale como aceite de contato (sem checkbox separado).
+function reportCalculadoraLead(data) {
+    try {
+        if (!data) return;
+        var params = new URLSearchParams();
+        params.set('lead', 'calculadora');
+        params.set('nome', data.nome || '');
+        params.set('telefone', data.telefone || '');
+        params.set('consentiu', (data.nome || data.telefone) ? 'sim' : '');
+        params.set('salario', data.salario || '');
+        params.set('tipo', data.tipo || '');
+        params.set('total_estimado', data.totalEstimado || '');
+        params.set('pagina_origem', document.referrer || 'direto');
+        var gclid = captureGclid();
+        if (gclid) params.set('gclid', gclid);
+        params.set('canal', gclid ? 'ads' : (document.referrer && document.referrer.indexOf(window.location.hostname) === -1 ? 'referencia' : 'direto/organico'));
+        var url = GCLID_WEBHOOK_URL + '?' + params.toString();
+        if (navigator.sendBeacon) {
+            navigator.sendBeacon(url);
+        } else {
+            fetch(url, { mode: 'no-cors', keepalive: true });
+        }
+    } catch (e) {
+        // silencioso — não interrompe a exibição do resultado
+    }
+}
+window.acsaReportCalculadoraLead = reportCalculadoraLead;
+
 // Tracking de conversão para Google Ads.
 // Conversão "WhatsApp Empresas" (secundária, não usada para lances) — dispara
 // além da conversão principal sempre que a origem do clique for da página de

@@ -172,5 +172,19 @@ document.addEventListener('DOMContentLoaded', function () {
                 window.dataLayer.push({ event: 'calculadora_usada', tipo_desligamento: tipo });
             }
         } catch (err) { /* silencioso */ }
+
+        try {
+            if (window.acsaReportCalculadoraLead) {
+                var nomeEl = document.getElementById('calc-nome');
+                var telefoneEl = document.getElementById('calc-telefone');
+                window.acsaReportCalculadoraLead({
+                    nome: nomeEl ? nomeEl.value.trim() : '',
+                    telefone: telefoneEl ? telefoneEl.value.trim() : '',
+                    salario: salario,
+                    tipo: tipo,
+                    totalEstimado: total
+                });
+            }
+        } catch (err) { /* silencioso */ }
     });
 });
