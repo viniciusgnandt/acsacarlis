@@ -75,10 +75,16 @@ function reportCalculadoraLead(data) {
         params.set('outros_descontos', data.outrosDescontos || '');
         params.set('ferias_vencidas', data.feriasVencidas || '');
         params.set('total_estimado', data.totalEstimado || '');
-        params.set('pagina_origem', document.referrer || 'direto');
+        params.set('pagina_origem', document.referrer || '(sem referrer)');
         var gclid = captureGclid();
         if (gclid) params.set('gclid', gclid);
-        params.set('canal', gclid ? 'ads' : (document.referrer && document.referrer.indexOf(window.location.hostname) === -1 ? 'referencia' : 'direto/organico'));
+        // Canal é sempre binário: só existem duas perguntas relevantes aqui —
+        // "tem gclid salvo (veio de anúncio em algum momento nos últimos 90
+        // dias)" ou não. "Página de origem" (acima) é quem registra se ESSA
+        // visita específica teve referrer — são perguntas diferentes; não usar
+        // a mesma palavra ("direto") nas duas colunas pra não parecer a mesma
+        // coisa numa leitura rápida da planilha.
+        params.set('canal', gclid ? 'ads' : 'nao-ads');
         var url = GCLID_WEBHOOK_URL + '?' + params.toString();
         if (navigator.sendBeacon) {
             navigator.sendBeacon(url);
