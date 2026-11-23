@@ -92,6 +92,12 @@ function renderHeader(attrs) {
   tpl = tpl.split('{{HEADER_WA_LABEL}}').join(waLabel);
   tpl = tpl.split('{{HEADER_SUBLABEL}}').join(subLabel);
 
+  // noCalc="1": tira o link da calculadora do menu (páginas que recebem tráfego pago —
+  // a calculadora atrai quem só quer saber "quanto vou receber", não quem quer contratar).
+  if (attrs.noCalc === '1') {
+    tpl = tpl.split('\n').filter(l => !l.includes('/calculadora-trabalhista.html')).join('\n');
+  }
+
   if (variant === 'area') {
     tpl = tpl.split('{{AREA_SLUG}}').join(attrs.areaSlug || '');
     tpl = tpl.split('{{AREA_LABEL}}').join(attrs.areaLabel || '');
